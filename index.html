@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadra Labs — Leadership is built in moments</title>
+<!-- NOVA: edit copy here -->
+<meta name="description" content="Leadra is a behavioural development app for emerging leaders. Recognise pressure spikes, difficult conversations, and change — and build the capability to navigate them with confidence.">
+<meta property="og:title" content="Leadra Labs — Leadership is built in moments">
+<!-- NOVA: edit copy here -->
+<meta property="og:description" content="A behavioural development app for emerging leaders, built for the moments that matter.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leadralabs.com">
+<meta property="og:image" content="https://leadralabs.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A3560'/%3E%3Ctext x='32' y='46' font-family='Arial, sans-serif' font-size='38' font-weight='700' fill='%23E8961E' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A3560;
+    --gold: #E8961E;
+    --gold-hover: #C97D10;
+    --off-white: #F9F8F6;
+    --white: #FFFFFF;
+    --dark-text: #1C1C1C;
+    --muted-text: #5C5C5C;
+    --border: #E2E0DC;
+    --community-bg: #F2F0EB;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--dark-text);
+    background: var(--off-white);
+  }
+
+  img, svg { display: block; max-width: 100%; }
+
+  a { text-decoration: none; color: inherit; }
+
+  ul { list-style: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 96px 0; }
+
+  h1, h2, h3 { font-weight: 600; color: var(--navy); }
+
+  h2.section-heading {
+    font-size: 36px;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 16px;
+  }
+
+  p.section-subtext {
+    font-size: 18px;
+    color: var(--muted-text);
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 56px;
+  }
+
+  .eyebrow-pill {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+
+  .eyebrow-gold {
+    display: inline-block;
+    background: rgba(232,150,30,0.12);
+    color: var(--gold-hover);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 24px;
+  }
+  .btn-gold:hover { background: var(--gold-hover); }
+
+  .btn-gold-sm {
+    background: var(--gold);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 24px;
+  }
+  .btn-gold-sm:hover { background: var(--gold-hover); }
+
+  .btn-outline-navy {
+    background: transparent;
+    color: var(--navy);
+    border: 1.5px solid var(--navy);
+    padding: 14px 28px;
+    border-radius: 24px;
+  }
+  .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
+
+  .btn-text-arrow {
+    background: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    padding: 14px 4px;
+  }
+  .btn-text-arrow span { color: var(--gold); margin-left: 6px; transition: margin-left 0.15s ease; }
+  .btn-text-arrow:hover span { margin-left: 10px; }
+
+  /* ---------- Nav ---------- */
+  header.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+  }
+  .logo .arrow { color: var(--gold); margin: 0 2px; }
+
+  nav.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  nav.nav-links a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-text);
+  }
+  nav.nav-links a:hover { color: var(--gold-hover); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--navy);
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 24px 20px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--off-white);
+    padding: 100px 0;
+  }
+  .hero .container {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+  .hero-text { flex: 0 0 55%; }
+  .hero-visual { flex: 0 0 40%; margin-left: auto; }
+
+  .hero-text h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin: 20px 0 24px;
+  }
+
+  .hero-text p.sub {
+    font-size: 18px;
+    color: var(--muted-text);
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual-card {
+    max-width: 480px;
+    margin-left: auto;
+    background: var(--navy);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .hero-visual-card .accent-bar { height: 4px; background: var(--gold); }
+  .hero-visual-card .placeholder-content {
+    padding: 100px 24px;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+  }
+
+  /* ---------- Capabilities ---------- */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .capability-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 20px;
+    transition: border-color 0.15s ease;
+  }
+  .capability-card:hover { border-color: var(--gold); }
+
+  .capability-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(232,150,30,0.12);
+    color: var(--gold-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .capability-card h3 {
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .capability-card p {
+    font-size: 14px;
+    color: var(--muted-text);
+  }
+
+  /* ---------- How it works ---------- */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  .pillar .num {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .pillar h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .pillar p {
+    color: var(--muted-text);
+  }
+
+  /* ---------- Playbook ---------- */
+  .playbook-section {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .playbook-section .container {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .playbook-text { flex: 0 0 55%; }
+  .playbook-visual { flex: 0 0 40%; margin-left: auto; }
+
+  .playbook-text .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .playbook-text h2 {
+    color: var(--white);
+    font-size: 36px;
+    margin: 16px 0 20px;
+  }
+
+  .playbook-text p.body-text {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 28px;
+    max-width: 480px;
+  }
+
+  .playbook-modules {
+    margin-bottom: 32px;
+  }
+  .playbook-modules li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+  }
+  .playbook-modules li span.dot { color: var(--gold); }
+
+  .playbook-note {
+    display: block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .playbook-cover {
+    max-width: 340px;
+    margin-left: auto;
+    background: var(--white);
+    border: 2px solid var(--navy);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .playbook-cover .top-bar { height: 8px; background: var(--gold); }
+  .playbook-cover .cover-content { padding: 60px 24px; }
+  .playbook-cover .brand {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--gold-hover);
+    margin-bottom: 24px;
+  }
+  .playbook-cover .title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .playbook-cover .subtitle {
+    font-size: 16px;
+    color: var(--muted-text);
+    margin-bottom: 24px;
+  }
+  .playbook-cover .arrow-icon {
+    font-size: 20px;
+    color: var(--gold);
+  }
+
+  /* ---------- Pricing ---------- */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .price-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .price-card.featured {
+    border: 2px solid var(--gold);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+
+  .price-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .price-card .price {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .price-card .price span {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--muted-text);
+  }
+
+  .price-card .tagline {
+    font-size: 14px;
+    color: var(--muted-text);
+    margin-bottom: 28px;
+  }
+
+  .price-card ul {
+    margin-bottom: 32px;
+    flex-grow: 1;
+  }
+
+  .price-card ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14.5px;
+    margin-bottom: 14px;
+    color: var(--dark-text);
+  }
+  .price-card ul li span.check { color: var(--gold); font-weight: 600; }
+
+  .price-card .btn { text-align: center; width: 100%; }
+
+  .pricing-footnote {
+    text-align: center;
+    color: var(--muted-text);
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+  /* ---------- Community ---------- */
+  .community-section {
+    background: var(--community-bg);
+    text-align: center;
+  }
+  .community-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .community-inner h2 { font-size: 36px; margin: 20px 0 16px; }
+  .community-inner p { color: var(--muted-text); margin-bottom: 36px; }
+
+  .email-capture {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .email-capture input {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 13px 18px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    width: 300px;
+    max-width: 100%;
+    background: var(--white);
+    color: var(--dark-text);
+  }
+  .email-capture input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+
+  .email-capture button {
+    border-radius: 24px;
+    padding: 13px 26px;
+  }
+
+  /* ---------- Get access ---------- */
+  .get-access {
+    background: var(--off-white);
+    text-align: center;
+  }
+  .get-access h2 { margin-bottom: 16px; }
+  .get-access .section-subtext { margin-bottom: 40px; }
+  .get-access-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .get-access .fine-print {
+    color: var(--muted-text);
+    font-size: 14px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 72px 0 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 56px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .footer-logo .arrow { color: var(--gold); margin: 0 2px; }
+
+  .footer-tagline {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+  }
+
+  .footer-copyright {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+  }
+
+  .footer-heading {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  .footer-heading.second { margin-top: 28px; }
+
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a { color: rgba(255,255,255,0.85); font-size: 15px; }
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 24px 0;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .pillars { grid-template-columns: 1fr; gap: 40px; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 768px) {
+    section { padding: 64px 0; }
+
+    nav.nav-links { display: none; }
+    .hamburger { display: block; }
+
+    .hero .container { flex-direction: column; }
+    .hero-text { flex: 1; }
+    .hero-visual { flex: 1; margin: 40px 0 0; width: 100%; }
+    .hero-visual-card { margin: 0; max-width: 100%; }
+    .hero-text h1 { font-size: 36px; }
+
+    .playbook-section .container { flex-direction: column; }
+    .playbook-visual { margin: 40px 0 0; width: 100%; }
+    .playbook-cover { margin: 0 auto; }
+
+    h2.section-heading { font-size: 28px; }
+
+    .nav-right { gap: 16px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-ctas { flex-direction: column; align-items: flex-start; }
+    .get-access-ctas { flex-direction: column; align-items: stretch; }
+    .get-access-ctas .btn { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">LEADRA<span class="arrow">›</span>LABS</a>
+    <nav class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#playbook">The playbook</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#community">Community</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#" class="btn btn-gold-sm"><!-- TODO: replace with real link -->Get early access</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how-it-works">How it works</a>
+    <a href="#playbook">The playbook</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#community">Community</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <!-- NOVA: edit copy here -->
+      <span class="eyebrow-pill">Emerging leaders · Built for the moments that matter</span>
+      <!-- NOVA: edit copy here -->
+      <h1>Leadership is built in moments.</h1>
+      <!-- NOVA: edit copy here -->
+      <p class="sub">Leadra is a behavioural development app for emerging leaders. It helps you recognise the pressure spikes, difficult conversations, and unexpected changes — and build the capabilities to navigate them with confidence.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Download the playbook</a>
+        <a href="#how-it-works" class="btn btn-text-arrow">Learn how it works<span>→</span></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <!-- TODO: replace with actual app screenshot -->
+      <div class="hero-visual-card">
+        <div class="accent-bar"></div>
+        <div class="placeholder-content">[ App preview — to be added ]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section id="capabilities">
+  <div class="container">
+    <!-- NOVA: edit copy here -->
+    <h2 class="section-heading">Five capabilities. One leadership identity.</h2>
+    <!-- NOVA: edit copy here -->
+    <p class="section-subtext">Each capability is taught through micro-moments, short practice tasks, and immediate reflection loops — ensuring learning is contextual, frequent, and measurable.</p>
+    <div class="capabilities-grid">
+      <div class="capability-card">
+        <div class="capability-icon">ER</div>
+        <h3>Emotional Regulation</h3>
+        <p>Stay grounded when pressure spikes</p>
+      </div>
+      <div class="capability-card">
+        <div class="capability-icon">CT</div>
+        <h3>Critical Thinking</h3>
+        <p>Cut through noise and make sharper decisions</p>
+      </div>
+      <div class="capability-card">
+        <div class="capability-icon">SJ</div>
+        <h3>Situational Judgement</h3>
+        <p>Read the moment and respond with intention</p>
+      </div>
+      <div class="capability-card">
+        <div class="capability-icon">CA</div>
+        <h3>Change Agility</h3>
+        <p>Stay steady and effective when things shift</p>
+      </div>
+      <div class="capability-card">
+        <div class="capability-icon">IN</div>
+        <h3>Influence</h3>
+        <p>Move people without relying on authority</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works">
+  <div class="container">
+    <!-- NOVA: edit copy here -->
+    <h2 class="section-heading">Grounded in behavioural science.</h2>
+    <!-- NOVA: edit copy here -->
+    <p class="section-subtext">Leadra translates evidence-based principles from leadership development, organisational behaviour, and coaching into a practical, in-the-moment learning system.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="num">01</div>
+        <!-- NOVA: edit copy here -->
+        <h3>Deliberate practice</h3>
+        <!-- NOVA: edit copy here -->
+        <p>Learning applied to real workplace tasks, with repeated and spaced practice, produces higher impact and better retention.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <!-- NOVA: edit copy here -->
+        <h3>Behavioural principles</h3>
+        <!-- NOVA: edit copy here -->
+        <p>Small, observable behaviours shaped by clear prompts and timely feedback produce measurable changes in how you lead.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <!-- NOVA: edit copy here -->
+        <h3>Personalised feedback</h3>
+        <!-- NOVA: edit copy here -->
+        <p>Combining micro-coaching with automated nudges increases self-efficacy and translates insight into real-world action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAYBOOK ============ -->
+<section id="playbook" class="playbook-section">
+  <div class="container">
+    <div class="playbook-text">
+      <!-- NOVA: edit copy here -->
+      <span class="eyebrow">Free resource</span>
+      <!-- NOVA: edit copy here -->
+      <h2>Start with the Emerging Leaders Playbook.</h2>
+      <!-- NOVA: edit copy here -->
+      <p class="body-text">A self-directed workbook covering five core leadership capabilities — with 7-day practice plans, reflection exercises, and in-the-moment scripts. Use it alongside the Leadra app or as a standalone resource.</p>
+      <ul class="playbook-modules">
+        <!-- NOVA: edit copy here -->
+        <li><span class="dot">•</span> Module 1: Emotional Regulation — 7-day practice</li>
+        <li><span class="dot">•</span> Module 2: Critical Thinking — decision filters and probes</li>
+        <li><span class="dot">•</span> Module 3: Situational Judgement — reading the moment</li>
+        <li><span class="dot">•</span> Module 4: Change Agility — staying steady through uncertainty</li>
+        <li><span class="dot">•</span> Module 5: Influence — coming soon</li>
+      </ul>
+      <a href="emerging-leaders-playbook.pdf" class="btn btn-gold" style="color:var(--navy);"><!-- TODO: replace with real link -->Download free playbook</a>
+      <span class="playbook-note">No sign-up required · PDF · Free</span>
+    </div>
+    <div class="playbook-visual">
+      <div class="playbook-cover">
+        <div class="top-bar"></div>
+        <div class="cover-content">
+          <div class="brand">LEADRA LABS</div>
+          <div class="title">Emerging Leaders</div>
+          <div class="subtitle">Playbook</div>
+          <div class="arrow-icon">↑</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="container">
+    <!-- NOVA: edit copy here -->
+    <h2 class="section-heading">Choose how you grow.</h2>
+    <!-- NOVA: edit copy here -->
+    <p class="section-subtext">Start free. Move to a plan when you're ready. No lock-in.</p>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <h3>Essentials</h3>
+        <!-- NOVA: edit copy here -->
+        <div class="price">$X <span>/month</span></div>
+        <!-- NOVA: edit copy here -->
+        <p class="tagline">For individuals getting started</p>
+        <ul>
+          <li><span class="check">✓</span> Access to all 5 capability modules</li>
+          <li><span class="check">✓</span> 7-day practice plans</li>
+          <li><span class="check">✓</span> Daily journaling and reflection</li>
+          <li><span class="check">✓</span> Basic pattern insights</li>
+          <li><span class="check">✓</span> Playbook download included</li>
+        </ul>
+        <a href="#" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Get started</a>
+      </div>
+
+      <div class="price-card featured">
+        <span class="popular-badge">Most popular</span>
+        <h3>Professional</h3>
+        <!-- NOVA: edit copy here -->
+        <div class="price">$XX <span>/month</span></div>
+        <!-- NOVA: edit copy here -->
+        <p class="tagline">For emerging leaders building real habits</p>
+        <ul>
+          <li><span class="check">✓</span> Everything in Essentials</li>
+          <li><span class="check">✓</span> Personalised weekly summaries</li>
+          <li><span class="check">✓</span> Micromoment tracking</li>
+          <li><span class="check">✓</span> Behavioural pattern detection</li>
+          <li><span class="check">✓</span> In-the-moment coaching nudges</li>
+          <li><span class="check">✓</span> Priority access to new modules</li>
+        </ul>
+        <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Get started</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Enhanced</h3>
+        <!-- NOVA: edit copy here -->
+        <div class="price">$XX <span>/month</span></div>
+        <!-- NOVA: edit copy here -->
+        <p class="tagline">For teams and organisations</p>
+        <ul>
+          <li><span class="check">✓</span> Everything in Professional</li>
+          <li><span class="check">✓</span> Team dashboard (coming soon)</li>
+          <li><span class="check">✓</span> Cohort-based learning paths</li>
+          <li><span class="check">✓</span> Coach or manager visibility</li>
+          <li><span class="check">✓</span> Custom capability focus</li>
+          <li><span class="check">✓</span> Dedicated onboarding support</li>
+        </ul>
+        <a href="#" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Talk to us</a>
+      </div>
+
+    </div>
+    <!-- NOVA: edit copy here -->
+    <p class="pricing-footnote">All plans include a 14-day free trial. Cancel any time.</p>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section id="community" class="community-section">
+  <div class="community-inner">
+    <span class="eyebrow-gold">Coming soon</span>
+    <!-- NOVA: edit copy here -->
+    <h2>A community of leaders who reflect, not just react.</h2>
+    <!-- NOVA: edit copy here -->
+    <p>The Leadra community is being built. A space for emerging leaders to share moments, compare patterns, and support each other's growth. Get early access when we launch.</p>
+    <!-- TODO: wire up to email capture (e.g. Mailchimp, ConvertKit) -->
+    <form class="email-capture" onsubmit="return false;">
+      <input type="email" placeholder="your@email.com" aria-label="Email address" required>
+      <button type="submit" class="btn btn-gold-sm">Notify me</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ GET ACCESS ============ -->
+<section class="get-access">
+  <div class="container">
+    <!-- NOVA: edit copy here -->
+    <h2 class="section-heading">Ready to build your leadership identity?</h2>
+    <!-- NOVA: edit copy here -->
+    <p class="section-subtext">Leadra is available now as a web app. A Telegram mini app is coming soon. Start with the free playbook, or jump straight into the app.</p>
+    <div class="get-access-ctas">
+      <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Access the web app</a>
+      <a href="emerging-leaders-playbook.pdf" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Download the playbook</a>
+    </div>
+    <p class="fine-print">Telegram mini app · Coming soon</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">LEADRA<span class="arrow">›</span>LABS</div>
+        <!-- NOVA: edit copy here -->
+        <p class="footer-tagline">Leadership is built in moments.</p>
+        <p class="footer-copyright">© 2026 Leadra Labs. All rights reserved.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Product</div>
+        <ul class="footer-links">
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#playbook">The playbook</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#"><!-- TODO: replace with real link -->Privacy policy</a></li>
+          <li><a href="#"><!-- TODO: replace with real link -->Terms of use</a></li>
+        </ul>
+        <div class="footer-heading second">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@leadralabs.com">hello@leadralabs.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">Built in Australia 🇦🇺</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburgerBtn').addEventListener('click', function () {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.mobile-menu a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
