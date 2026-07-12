@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Leadra Labs</title>
+<!-- NOVA: edit copy here -->
+<meta name="description" content="Leadra Labs is a behavioural development app for emerging leaders, built for the moments that matter. Learn what we're building and why.">
+<meta property="og:title" content="About — Leadra Labs">
+<!-- NOVA: edit copy here -->
+<meta property="og:description" content="Leadership, built in real moments. Learn about Leadra Labs and what we're building.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leadralabs.com/about.html">
+<meta property="og:image" content="https://leadralabs.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A3560'/%3E%3Ctext x='32' y='46' font-family='Arial, sans-serif' font-size='38' font-weight='700' fill='%23E8961E' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A3560;
+    --gold: #E8961E;
+    --gold-hover: #C97D10;
+    --off-white: #F9F8F6;
+    --white: #FFFFFF;
+    --dark-text: #1C1C1C;
+    --muted-text: #5C5C5C;
+    --border: #E2E0DC;
+    --community-bg: #F2F0EB;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--dark-text);
+    background: var(--off-white);
+  }
+
+  img, svg { display: block; max-width: 100%; }
+
+  a { text-decoration: none; color: inherit; }
+
+  ul { list-style: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 96px 0; }
+
+  h1, h2, h3 { font-weight: 600; color: var(--navy); }
+
+  h2.section-heading {
+    font-size: 36px;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 16px;
+  }
+
+  p.section-subtext {
+    font-size: 18px;
+    color: var(--muted-text);
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 56px;
+  }
+
+  .eyebrow-pill {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+
+  .eyebrow-gold {
+    display: inline-block;
+    background: rgba(232,150,30,0.12);
+    color: var(--gold-hover);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 24px;
+  }
+  .btn-gold:hover { background: var(--gold-hover); }
+
+  .btn-gold-sm {
+    background: var(--gold);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 24px;
+  }
+  .btn-gold-sm:hover { background: var(--gold-hover); }
+
+  .btn-outline-navy {
+    background: transparent;
+    color: var(--navy);
+    border: 1.5px solid var(--navy);
+    padding: 14px 28px;
+    border-radius: 24px;
+  }
+  .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
+
+  /* ---------- Nav ---------- */
+  header.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+  }
+  .logo .arrow { color: var(--gold); margin: 0 2px; }
+
+  nav.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  nav.nav-links a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-text);
+  }
+  nav.nav-links a:hover { color: var(--gold-hover); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--navy);
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 24px 20px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+
+  /* ---------- Page header ---------- */
+  .page-header {
+    background: var(--off-white);
+    text-align: center;
+    padding: 72px 0 64px;
+  }
+  .page-header h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-top: 20px;
+  }
+
+  /* ---------- What is Leadra ---------- */
+  .prose {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .prose p {
+    margin-bottom: 24px;
+    color: var(--dark-text);
+  }
+  .prose p:last-child { margin-bottom: 0; }
+
+  /* ---------- Founder ---------- */
+  .founder-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .avatar-placeholder {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .founder-card .founder-text p {
+    color: var(--dark-text);
+    margin-bottom: 16px;
+  }
+  .founder-card .founder-text p:last-child { margin-bottom: 0; }
+
+  .founder-note {
+    font-size: 13px;
+    color: var(--muted-text);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  /* ---------- How we use AI (trust section) ---------- */
+  .trust-section {
+    background: var(--community-bg);
+  }
+
+  /* ---------- Roadmap ---------- */
+  .roadmap-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+    color: var(--muted-text);
+    font-size: 18px;
+  }
+
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .roadmap-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 28px;
+  }
+
+  .roadmap-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(232,150,30,0.12);
+    color: var(--gold-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .roadmap-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .roadmap-card p {
+    color: var(--muted-text);
+  }
+
+  /* ---------- Closing CTA ---------- */
+  .get-access {
+    background: var(--off-white);
+    text-align: center;
+  }
+  .get-access h2 { margin-bottom: 16px; }
+  .get-access-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 72px 0 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 56px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .footer-logo .arrow { color: var(--gold); margin: 0 2px; }
+
+  .footer-tagline {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+  }
+
+  .footer-copyright {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+  }
+
+  .footer-heading {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  .footer-heading.second { margin-top: 28px; }
+
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a { color: rgba(255,255,255,0.85); font-size: 15px; }
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 24px 0;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .roadmap-grid { grid-template-columns: 1fr; gap: 24px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 768px) {
+    section { padding: 64px 0; }
+
+    nav.nav-links { display: none; }
+    .hamburger { display: block; }
+
+    .page-header h1 { font-size: 32px; }
+    h2.section-heading { font-size: 28px; }
+
+    .founder-card { flex-direction: column; align-items: center; text-align: center; }
+
+    .nav-right { gap: 12px; }
+    .nav-right .btn-gold-sm { display: none; }
+  }
+
+  @media (max-width: 480px) {
+    .get-access-ctas { flex-direction: column; align-items: stretch; }
+    .get-access-ctas .btn { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LEADRA<span class="arrow">›</span>LABS</a>
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="index.html#playbook">The playbook</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#community">Community</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#" class="btn btn-gold-sm"><!-- TODO: replace with real link -->Get early access</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">About</a>
+    <a href="index.html#how-it-works">How it works</a>
+    <a href="index.html#playbook">The playbook</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#community">Community</a>
+  </div>
+</header>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow-pill">About Leadra Labs</span>
+    <!-- NOVA: edit copy here -->
+    <h1>Leadership, built in real moments.</h1>
+  </div>
+</section>
+
+<!-- ============ WHAT IS LEADRA ============ -->
+<section id="what-is-leadra">
+  <div class="container">
+    <h2 class="section-heading">What Leadra is</h2>
+    <div class="prose">
+      <!-- NOVA: edit copy here -->
+      <p>Leadership doesn't happen in a classroom. It happens in the two minutes before a hard conversation, the moment you decide whether to speak up in a meeting, the week where everything shifts and you have to hold steady anyway.</p>
+      <!-- NOVA: edit copy here -->
+      <p>Leadra is a behavioural development app built for exactly those moments. Instead of theory delivered in a workshop once a year, Leadra meets you in the moment itself — helping you notice what's happening, reflect on it, and build the five core capabilities that make up genuine leadership: Emotional Regulation, Critical Thinking, Situational Judgement, Change Agility, and Influence.</p>
+      <!-- NOVA: edit copy here -->
+      <p>We built Leadra in Australia, for emerging leaders and mid-career professionals who are done waiting for someone to hand them a leadership title before they start actually leading.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEET THE FOUNDER ============ -->
+<section id="founder">
+  <div class="container">
+    <h2 class="section-heading">Meet the founder</h2>
+    <div class="founder-card">
+      <div class="avatar-placeholder">NJ</div>
+      <div class="founder-text">
+        <!-- NOVA: replace this entire section with your real bio — background, what led you to
+             build Leadra, anything personal you want to share. Keep it specific and personal rather
+             than generic "passionate about helping people" language. -->
+        <p class="founder-note">Placeholder bio — replace before launch.</p>
+        <p>Leadra was founded by Nova Jackson, who leads content and strategy for the platform. [Placeholder bio — 2-3 sentences on background and what drew Nova to leadership development and building Leadra.]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW WE USE AI ============ -->
+<section id="how-we-use-ai" class="trust-section">
+  <div class="container">
+    <h2 class="section-heading">How we use AI</h2>
+    <div class="prose">
+      <!-- NOVA: edit copy here -->
+      <p>Leadra uses AI — specifically, models built by Anthropic — to read your reflections and offer personalised suggestions. We want to be upfront about what that means and what it doesn't.</p>
+      <!-- NOVA: edit copy here -->
+      <p>The AI isn't a therapist, and it isn't trying to be one. It's a tool for noticing patterns and offering a next step, the way a good mentor might jot a thought in the margin of your notebook. It doesn't diagnose, it doesn't judge, and it's built with clear guardrails so it never implies verdicts about your workplace, your colleagues, or your manager — it reflects your experience back to you, it doesn't referee it.</p>
+      <!-- NOVA: edit copy here -->
+      <p>Your reflections are yours. We don't sell your data, and we've built Leadra so the AI's only job is to help you see yourself more clearly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHERE WE'RE HEADED ============ -->
+<!-- NOVA: add/adjust roadmap items here, and any timeline language you're comfortable committing to -->
+<section id="roadmap">
+  <div class="container">
+    <h2 class="section-heading">Where we're headed</h2>
+    <p class="roadmap-intro">Leadra today is just the start. We're building toward:</p>
+    <div class="roadmap-grid">
+      <div class="roadmap-card">
+        <div class="roadmap-icon">01</div>
+        <h3>Live workshops</h3>
+        <p>Sessions that bring the five capabilities to life beyond the app, run by people who've actually led through hard moments.</p>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-icon">02</div>
+        <h3>A real community</h3>
+        <p>A space for emerging leaders to compare notes, share what's working, and support each other through the moments the app can't fully capture on its own.</p>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-icon">03</div>
+        <h3>Cohort-based learning</h3>
+        <p>For teams and organisations who want to build these capabilities together, not just individually.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="get-access">
+  <div class="container">
+    <!-- NOVA: edit copy here -->
+    <h2 class="section-heading">Want to be part of where we're going?</h2>
+    <div class="get-access-ctas">
+      <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Access the web app</a>
+      <a href="#" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Get early access</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">LEADRA<span class="arrow">›</span>LABS</div>
+        <!-- NOVA: edit copy here -->
+        <p class="footer-tagline">Leadership is built in moments.</p>
+        <p class="footer-copyright">© 2026 Leadra Labs. All rights reserved.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Product</div>
+        <ul class="footer-links">
+          <li><a href="index.html#how-it-works">How it works</a></li>
+          <li><a href="index.html#playbook">The playbook</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#community">Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#"><!-- TODO: replace with real link -->Privacy policy</a></li>
+          <li><a href="#"><!-- TODO: replace with real link -->Terms of use</a></li>
+        </ul>
+        <div class="footer-heading second">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@leadralabs.com">hello@leadralabs.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">Built in Australia 🇦🇺</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburgerBtn').addEventListener('click', function () {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.mobile-menu a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
