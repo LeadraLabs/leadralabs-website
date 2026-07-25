@@ -11,7 +11,7 @@
   },
   "capabilities": {
     "heading": "Skills that make leadership feel easier",
-    "subtext": "Real leadership can feel messy. These capabilities help you navigate tough moments, reduce friction and lead with more intention. \n\nTaught through tangible micro-moments, each capability is broken down and made personal to you and your unique leadership challenges. "
+    "subtext": "Real leadership can feel messy. These capabilities help you navigate tough moments, reduce friction and lead with more intention. \n\nTaught through tangible micro-moments, each capability is made personal to you and your unique leadership challenges. "
   },
   "how_it_works": {
     "heading": "Grounded in behavioural science.",
@@ -20,17 +20,17 @@
       {
         "number": "01",
         "heading": "Deliberate practice",
-        "body": "Learning applied to real workplace tasks, with repeated and spaced practice, produces higher impact and better retention."
+        "body": "Learning applied to real workplace tasks, with repeated and spaced practice relevant to real life, turning leadership into a skill you build, not something you passively hope improves. "
       },
       {
         "number": "02",
         "heading": "Behavioural principles",
-        "body": "Small, observable behaviours shaped by clear prompts and timely feedback produce measurable changes in how you lead."
+        "body": "Turn leadership ideas into small, repeatable actions your brain can actually stick to. Research shows that people change most effectively through cues, micro-habits and consistent reinforcement. "
       },
       {
         "number": "03",
         "heading": "Personalised feedback",
-        "body": "Combining micro-coaching with automated nudges increases self-efficacy and translates insight into real-world action."
+        "body": "Behaviour change is more likely to occur when feedback is specific, timely and tailored to real patterns. Grow faster by learning exactly what to improve, not just what to learn. "
       }
     ]
   },
@@ -56,13 +56,13 @@
         "name": "Essentials",
         "price": "$0.00",
         "price_period": "/month",
-        "tagline": "For individuals getting started",
+        "tagline": "Starter plan ",
         "features": [
           "Access to all 5 capability modules",
-          "7-day practice plans",
+          "Physiological indicator tracking",
           "Daily journaling and reflection",
-          "Basic pattern insights",
-          "Playbook download included"
+          "Daily Micro-moments ",
+          "Monthly summary insights"
         ],
         "cta": "Get started"
       },
@@ -70,19 +70,19 @@
         "name": "Professional",
         "price": "$0.00",
         "price_period": "/month",
-        "tagline": "For emerging leaders building real habits",
+        "tagline": "For leaders serious about growth ",
         "features": [
           "Everything in Essentials",
-          "Personalised weekly summaries",
+          "Personalised weekly insight summaries",
           "Micromoment tracking",
           "Behavioural pattern detection",
-          "In-the-moment coaching nudges",
+          "Progress tracking",
           "Priority access to new modules"
         ],
         "cta": "Get started"
       },
       {
-        "name": "Enhanced",
+        "name": "Business ",
         "price": "$XX",
         "price_period": "/month",
         "tagline": "For teams and organisations",
@@ -98,12 +98,12 @@
       }
     ],
     "footnote_trial": "All plans include a 14-day free trial. Cancel any time.",
-    "footnote_testing": "Essentials and Professional are free while we're in testing — pricing will be introduced before general launch."
+    "footnote_testing": "Essentials and Professional are free while in testing. Pricing will be introduced before general launch"
   },
   "community": {
     "heading": "A community of leaders who reflect, not just react.",
-    "body": "The Leadra community is being built. A space for emerging leaders to share moments, compare patterns, and support each other's growth. Get early access when we launch.",
-    "form_button": "Notify me"
+    "body": "The Leadra community is being built. A space for leaders at any level to share moments, compare patterns, and support each other's growth. Register for early access. ",
+    "form_button": "Register"
   },
   "get_access": {
     "heading": "Ready to build your leadership identity?",
