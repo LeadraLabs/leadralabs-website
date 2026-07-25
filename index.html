@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leadra Labs: Leadership is built in moments</title>
-<!-- NOVA: edit copy here -->
+<!-- NOVA: these meta tags are intentionally left as plain HTML (not in content.json). Search engines and
+     social media crawlers read this page without running JavaScript, so text loaded dynamically from
+     content.json would not show up in Google results or link previews. Edit these two lines directly here. -->
 <meta name="description" content="Leadra is a behavioural development app for emerging leaders. Recognise pressure spikes, difficult conversations, and change — and build the capability to navigate them with confidence.">
 <meta property="og:title" content="Leadra Labs: Leadership is built in moments">
-<!-- NOVA: edit copy here -->
 <meta property="og:description" content="A behavioural development app for emerging leaders, built for the moments that matter.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leadralabs.com">
@@ -652,7 +653,7 @@
       <a href="#community">Community</a>
     </nav>
     <div class="nav-right">
-      <a href="#" class="btn btn-gold-sm"><!-- TODO: replace with real link -->Get early access</a>
+      <a href="#" class="btn btn-gold-sm" data-content="nav.cta_button"><!-- TODO: replace with real link -->Get early access</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
     </div>
   </div>
@@ -670,14 +671,14 @@
   <div class="container">
     <div class="hero-text">
       <!-- NOVA: edit copy here -->
-      <span class="eyebrow-pill">Emerging leaders · Built for the moments that matter</span>
+      <span class="eyebrow-pill" data-content="hero.eyebrow">Emerging leaders · Built for the moments that matter</span>
       <!-- NOVA: edit copy here -->
-      <h1>Leadership is built in moments.</h1>
+      <h1 data-content="hero.headline">Leadership is built in moments.</h1>
       <!-- NOVA: edit copy here -->
-      <p class="sub">Leadra is a behavioural development app for emerging leaders. It helps you recognise the pressure spikes, difficult conversations, and unexpected changes — and build the capabilities to navigate them with confidence.</p>
+      <p class="sub" data-content="hero.subheadline">Leadra is a behavioural development app for emerging leaders. It helps you recognise the pressure spikes, difficult conversations, and unexpected changes — and build the capabilities to navigate them with confidence.</p>
       <div class="hero-ctas">
-        <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Download the playbook</a>
-        <a href="#how-it-works" class="btn btn-text-arrow">Learn how it works<span>→</span></a>
+        <a href="#" class="btn btn-gold" data-content="hero.cta_primary"><!-- TODO: replace with real link -->Download the playbook</a>
+        <a href="#how-it-works" class="btn btn-text-arrow" data-content="hero.cta_secondary">Learn how it works<span>→</span></a>
       </div>
     </div>
     <div class="hero-visual">
@@ -694,9 +695,9 @@
 <section id="capabilities">
   <div class="container">
     <!-- NOVA: edit copy here -->
-    <h2 class="section-heading">Five capabilities. One leadership identity.</h2>
+    <h2 class="section-heading" data-content="capabilities.heading">Five capabilities. One leadership identity.</h2>
     <!-- NOVA: edit copy here -->
-    <p class="section-subtext">Each capability is taught through micro-moments, short practice tasks, and immediate reflection loops — ensuring learning is contextual, frequent, and measurable.</p>
+    <p class="section-subtext" data-content="capabilities.subtext">Each capability is taught through micro-moments, short practice tasks, and immediate reflection loops — ensuring learning is contextual, frequent, and measurable.</p>
     <div class="capabilities-grid">
       <div class="capability-card">
         <div class="capability-icon">ER</div>
@@ -731,30 +732,30 @@
 <section id="how-it-works">
   <div class="container">
     <!-- NOVA: edit copy here -->
-    <h2 class="section-heading">Grounded in behavioural science.</h2>
+    <h2 class="section-heading" data-content="how_it_works.heading">Grounded in behavioural science.</h2>
     <!-- NOVA: edit copy here -->
-    <p class="section-subtext">Leadra translates evidence-based principles from leadership development, organisational behaviour, and coaching into a practical, in-the-moment learning system.</p>
-    <div class="pillars">
+    <p class="section-subtext" data-content="how_it_works.subtext">Leadra translates evidence-based principles from leadership development, organisational behaviour, and coaching into a practical, in-the-moment learning system.</p>
+    <div class="pillars" data-content-list="how_it_works.pillars">
       <div class="pillar">
-        <div class="num">01</div>
+        <div class="num" data-field="number">01</div>
         <!-- NOVA: edit copy here -->
-        <h3>Deliberate practice</h3>
+        <h3 data-field="heading">Deliberate practice</h3>
         <!-- NOVA: edit copy here -->
-        <p>Learning applied to real workplace tasks, with repeated and spaced practice, produces higher impact and better retention.</p>
+        <p data-field="body">Learning applied to real workplace tasks, with repeated and spaced practice, produces higher impact and better retention.</p>
       </div>
       <div class="pillar">
-        <div class="num">02</div>
+        <div class="num" data-field="number">02</div>
         <!-- NOVA: edit copy here -->
-        <h3>Behavioural principles</h3>
+        <h3 data-field="heading">Behavioural principles</h3>
         <!-- NOVA: edit copy here -->
-        <p>Small, observable behaviours shaped by clear prompts and timely feedback produce measurable changes in how you lead.</p>
+        <p data-field="body">Small, observable behaviours shaped by clear prompts and timely feedback produce measurable changes in how you lead.</p>
       </div>
       <div class="pillar">
-        <div class="num">03</div>
+        <div class="num" data-field="number">03</div>
         <!-- NOVA: edit copy here -->
-        <h3>Personalised feedback</h3>
+        <h3 data-field="heading">Personalised feedback</h3>
         <!-- NOVA: edit copy here -->
-        <p>Combining micro-coaching with automated nudges increases self-efficacy and translates insight into real-world action.</p>
+        <p data-field="body">Combining micro-coaching with automated nudges increases self-efficacy and translates insight into real-world action.</p>
       </div>
     </div>
   </div>
@@ -765,21 +766,21 @@
   <div class="container">
     <div class="playbook-text">
       <!-- NOVA: edit copy here -->
-      <span class="eyebrow">Free resource</span>
+      <span class="eyebrow" data-content="playbook.eyebrow">Free resource</span>
       <!-- NOVA: edit copy here -->
-      <h2>Start with the Emerging Leaders Playbook.</h2>
+      <h2 data-content="playbook.headline">Start with the Emerging Leaders Playbook.</h2>
       <!-- NOVA: edit copy here -->
-      <p class="body-text">A self-directed workbook covering five core leadership capabilities — with 7-day practice plans, reflection exercises, and in-the-moment scripts. Use it alongside the Leadra app or as a standalone resource.</p>
-      <ul class="playbook-modules">
+      <p class="body-text" data-content="playbook.body">A self-directed workbook covering five core leadership capabilities — with 7-day practice plans, reflection exercises, and in-the-moment scripts. Use it alongside the Leadra app or as a standalone resource.</p>
+      <ul class="playbook-modules" data-content-list="playbook.modules">
         <!-- NOVA: edit copy here -->
-        <li><span class="dot">•</span> Module 1: Emotional Regulation — 7-day practice</li>
-        <li><span class="dot">•</span> Module 2: Critical Thinking — decision filters and probes</li>
-        <li><span class="dot">•</span> Module 3: Situational Judgement — reading the moment</li>
-        <li><span class="dot">•</span> Module 4: Change Agility — staying steady through uncertainty</li>
-        <li><span class="dot">•</span> Module 5: Influence — coming soon</li>
+        <li><span class="dot">•</span> <span data-field="text">Module 1: Emotional Regulation — 7-day practice</span></li>
+        <li><span class="dot">•</span> <span data-field="text">Module 2: Critical Thinking — decision filters and probes</span></li>
+        <li><span class="dot">•</span> <span data-field="text">Module 3: Situational Judgement — reading the moment</span></li>
+        <li><span class="dot">•</span> <span data-field="text">Module 4: Change Agility — staying steady through uncertainty</span></li>
+        <li><span class="dot">•</span> <span data-field="text">Module 5: Influence — coming soon</span></li>
       </ul>
-      <a href="emerging-leaders-playbook.pdf" class="btn btn-gold" style="color:var(--navy);">Download free playbook</a>
-      <span class="playbook-note">No sign-up required · PDF · Free</span>
+      <a href="emerging-leaders-playbook.pdf" class="btn btn-gold" style="color:var(--navy);" data-content="playbook.cta">Download free playbook</a>
+      <span class="playbook-note" data-content="playbook.cta_subtext">No sign-up required · PDF · Free</span>
     </div>
     <div class="playbook-visual">
       <div class="playbook-cover">
@@ -799,67 +800,67 @@
 <section id="pricing">
   <div class="container">
     <!-- NOVA: edit copy here -->
-    <h2 class="section-heading">Choose how you grow.</h2>
+    <h2 class="section-heading" data-content="pricing.heading">Choose how you grow.</h2>
     <!-- NOVA: edit copy here -->
-    <p class="section-subtext">Start free. Move to a plan when you're ready. No lock-in.</p>
-    <div class="pricing-grid">
+    <p class="section-subtext" data-content="pricing.subtext">Start free. Move to a plan when you're ready. No lock-in.</p>
+    <div class="pricing-grid" data-content-list="pricing.tiers">
 
       <div class="price-card">
-        <h3>Essentials</h3>
+        <h3 data-field="name">Essentials</h3>
         <!-- NOVA: edit copy here -->
-        <div class="price">$0.00 <span>/month</span></div>
+        <div class="price"><span data-field="price">$0.00</span> <span data-field="price_period">/month</span></div>
         <!-- NOVA: edit copy here -->
-        <p class="tagline">For individuals getting started</p>
-        <ul>
-          <li><span class="check">✓</span> Access to all 5 capability modules</li>
-          <li><span class="check">✓</span> 7-day practice plans</li>
-          <li><span class="check">✓</span> Daily journaling and reflection</li>
-          <li><span class="check">✓</span> Basic pattern insights</li>
-          <li><span class="check">✓</span> Playbook download included</li>
+        <p class="tagline" data-field="tagline">For individuals getting started</p>
+        <ul data-field-list="features">
+          <li><span class="check">✓</span> <span data-field="text">Access to all 5 capability modules</span></li>
+          <li><span class="check">✓</span> <span data-field="text">7-day practice plans</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Daily journaling and reflection</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Basic pattern insights</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Playbook download included</span></li>
         </ul>
-        <a href="#" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Get started</a>
+        <a href="#" class="btn btn-outline-navy" data-field="cta"><!-- TODO: replace with real link -->Get started</a>
       </div>
 
       <div class="price-card featured">
         <span class="popular-badge">Most popular</span>
-        <h3>Professional</h3>
+        <h3 data-field="name">Professional</h3>
         <!-- NOVA: edit copy here -->
-        <div class="price">$0.00 <span>/month</span></div>
+        <div class="price"><span data-field="price">$0.00</span> <span data-field="price_period">/month</span></div>
         <!-- NOVA: edit copy here -->
-        <p class="tagline">For emerging leaders building real habits</p>
-        <ul>
-          <li><span class="check">✓</span> Everything in Essentials</li>
-          <li><span class="check">✓</span> Personalised weekly summaries</li>
-          <li><span class="check">✓</span> Micromoment tracking</li>
-          <li><span class="check">✓</span> Behavioural pattern detection</li>
-          <li><span class="check">✓</span> In-the-moment coaching nudges</li>
-          <li><span class="check">✓</span> Priority access to new modules</li>
+        <p class="tagline" data-field="tagline">For emerging leaders building real habits</p>
+        <ul data-field-list="features">
+          <li><span class="check">✓</span> <span data-field="text">Everything in Essentials</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Personalised weekly summaries</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Micromoment tracking</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Behavioural pattern detection</span></li>
+          <li><span class="check">✓</span> <span data-field="text">In-the-moment coaching nudges</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Priority access to new modules</span></li>
         </ul>
-        <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Get started</a>
+        <a href="#" class="btn btn-gold" data-field="cta"><!-- TODO: replace with real link -->Get started</a>
       </div>
 
       <div class="price-card">
-        <h3>Enhanced</h3>
+        <h3 data-field="name">Enhanced</h3>
         <!-- NOVA: edit copy here -->
-        <div class="price">$XX <span>/month</span></div>
+        <div class="price"><span data-field="price">$XX</span> <span data-field="price_period">/month</span></div>
         <!-- NOVA: edit copy here -->
-        <p class="tagline">For teams and organisations</p>
-        <ul>
-          <li><span class="check">✓</span> Everything in Professional</li>
-          <li><span class="check">✓</span> Team dashboard (coming soon)</li>
-          <li><span class="check">✓</span> Cohort-based learning paths</li>
-          <li><span class="check">✓</span> Coach or manager visibility</li>
-          <li><span class="check">✓</span> Custom capability focus</li>
-          <li><span class="check">✓</span> Dedicated onboarding support</li>
+        <p class="tagline" data-field="tagline">For teams and organisations</p>
+        <ul data-field-list="features">
+          <li><span class="check">✓</span> <span data-field="text">Everything in Professional</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Team dashboard (coming soon)</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Cohort-based learning paths</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Coach or manager visibility</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Custom capability focus</span></li>
+          <li><span class="check">✓</span> <span data-field="text">Dedicated onboarding support</span></li>
         </ul>
-        <a href="#" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Talk to us</a>
+        <a href="#" class="btn btn-outline-navy" data-field="cta"><!-- TODO: replace with real link -->Talk to us</a>
       </div>
 
     </div>
     <!-- NOVA: edit copy here -->
-    <p class="pricing-footnote">All plans include a 14-day free trial. Cancel any time.</p>
+    <p class="pricing-footnote" data-content="pricing.footnote_trial">All plans include a 14-day free trial. Cancel any time.</p>
     <!-- NOVA: edit copy here -->
-    <p class="pricing-footnote">Essentials and Professional are free while we're in testing — pricing will be introduced before general launch.</p>
+    <p class="pricing-footnote" data-content="pricing.footnote_testing">Essentials and Professional are free while we're in testing — pricing will be introduced before general launch.</p>
   </div>
 </section>
 
@@ -868,13 +869,13 @@
   <div class="community-inner">
     <span class="eyebrow-gold">Coming soon</span>
     <!-- NOVA: edit copy here -->
-    <h2>A community of leaders who reflect, not just react.</h2>
+    <h2 data-content="community.heading">A community of leaders who reflect, not just react.</h2>
     <!-- NOVA: edit copy here -->
-    <p>The Leadra community is being built. A space for emerging leaders to share moments, compare patterns, and support each other's growth. Get early access when we launch.</p>
+    <p data-content="community.body">The Leadra community is being built. A space for emerging leaders to share moments, compare patterns, and support each other's growth. Get early access when we launch.</p>
     <!-- TODO: wire up to email capture (e.g. Mailchimp, ConvertKit) -->
     <form class="email-capture" onsubmit="return false;">
       <input type="email" placeholder="your@email.com" aria-label="Email address" required>
-      <button type="submit" class="btn btn-gold-sm">Notify me</button>
+      <button type="submit" class="btn btn-gold-sm" data-content="community.form_button">Notify me</button>
     </form>
   </div>
 </section>
@@ -883,14 +884,14 @@
 <section class="get-access">
   <div class="container">
     <!-- NOVA: edit copy here -->
-    <h2 class="section-heading">Ready to build your leadership identity?</h2>
+    <h2 class="section-heading" data-content="get_access.heading">Ready to build your leadership identity?</h2>
     <!-- NOVA: edit copy here -->
-    <p class="section-subtext">Leadra is available now as a web app. A Telegram mini app is coming soon. Start with the free playbook, or jump straight into the app.</p>
+    <p class="section-subtext" data-content="get_access.subtext">Leadra is available now as a web app. A Telegram mini app is coming soon. Start with the free playbook, or jump straight into the app.</p>
     <div class="get-access-ctas">
-      <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Access the web app</a>
-      <a href="emerging-leaders-playbook.pdf" class="btn btn-outline-navy">Download the playbook</a>
+      <a href="#" class="btn btn-gold" data-content="get_access.cta_primary"><!-- TODO: replace with real link -->Access the web app</a>
+      <a href="emerging-leaders-playbook.pdf" class="btn btn-outline-navy" data-content="get_access.cta_secondary">Download the playbook</a>
     </div>
-    <p class="fine-print">Telegram mini app · Coming soon</p>
+    <p class="fine-print" data-content="get_access.fine_print">Telegram mini app · Coming soon</p>
   </div>
 </section>
 
@@ -901,8 +902,8 @@
       <div>
         <div class="footer-logo">LEADRA<span class="arrow">›</span>LABS</div>
         <!-- NOVA: edit copy here -->
-        <p class="footer-tagline">Leadership is built in moments.</p>
-        <p class="footer-copyright">© 2026 Leadra Labs. All rights reserved.</p>
+        <p class="footer-tagline" data-content="footer.tagline">Leadership is built in moments.</p>
+        <p class="footer-copyright" data-content="footer.copyright">© 2026 Leadra Labs. All rights reserved.</p>
       </div>
       <div>
         <div class="footer-heading">Product</div>
@@ -939,6 +940,97 @@
       document.getElementById('mobileMenu').classList.remove('open');
     });
   });
+</script>
+
+<!--
+  Loads homepage copy from content.json and populates it into the page.
+  If content.json is missing, unreachable, or malformed, this silently does nothing
+  and the hardcoded text already in the HTML above is shown instead (fallback).
+-->
+<script>
+  function getByPath(obj, path) {
+    return path.split('.').reduce(function (value, key) {
+      return (value === undefined || value === null) ? undefined : value[key];
+    }, obj);
+  }
+
+  function applySimpleFields(root, content) {
+    root.querySelectorAll('[data-content]').forEach(function (el) {
+      var value = getByPath(content, el.getAttribute('data-content'));
+      if (typeof value === 'string' && value.length > 0) {
+        el.textContent = value;
+      }
+    });
+  }
+
+  function applyFieldsToCard(card, item) {
+    card.querySelectorAll('[data-field]').forEach(function (el) {
+      var field = el.getAttribute('data-field');
+      var value = item[field];
+      if (typeof value === 'string' && value.length > 0) {
+        el.textContent = value;
+      }
+    });
+    card.querySelectorAll('[data-field-list]').forEach(function (listEl) {
+      var items = item[listEl.getAttribute('data-field-list')];
+      if (Array.isArray(items) && items.length > 0) {
+        populateList(listEl, items, function (li, text) {
+          var textEl = li.querySelector('[data-field="text"]');
+          if (textEl && typeof text === 'string') {
+            textEl.textContent = text;
+          }
+        });
+      }
+    });
+  }
+
+  function populateList(container, items, fillItem) {
+    var template = container.children[0];
+    if (!template) return;
+    var templateClone = template.cloneNode(true);
+
+    items.forEach(function (item, index) {
+      var node = index === 0 ? template : templateClone.cloneNode(true);
+      fillItem(node, item);
+      if (index > 0) {
+        container.appendChild(node);
+      }
+    });
+
+    // Remove any leftover static entries beyond what content.json provided
+    while (container.children.length > items.length) {
+      container.removeChild(container.lastElementChild);
+    }
+  }
+
+  function applyContentLists(root, content) {
+    root.querySelectorAll('[data-content-list]').forEach(function (container) {
+      var items = getByPath(content, container.getAttribute('data-content-list'));
+      if (!Array.isArray(items) || items.length === 0) return;
+
+      populateList(container, items, function (node, item) {
+        if (typeof item === 'string') {
+          var textEl = node.querySelector('[data-field="text"]');
+          if (textEl) textEl.textContent = item;
+        } else if (item && typeof item === 'object') {
+          applyFieldsToCard(node, item);
+        }
+      });
+    });
+  }
+
+  fetch('content.json')
+    .then(function (response) {
+      if (!response.ok) throw new Error('content.json not found');
+      return response.json();
+    })
+    .then(function (content) {
+      applyContentLists(document, content);
+      applySimpleFields(document, content);
+    })
+    .catch(function () {
+      // content.json missing or invalid — hardcoded fallback text stays as-is
+    });
 </script>
 
 </body>
