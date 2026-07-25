@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "cta_button": "Get early access"
+  },
+  "hero": {
+    "eyebrow": "Emerging leaders · Built for the moments that matter",
+    "headline": "Leadership is built in moments.",
+    "subheadline": "Leadra is a behavioural development app for emerging leaders. It helps you recognise the pressure spikes, difficult conversations, and unexpected changes — and build the capabilities to navigate them with confidence.",
+    "cta_primary": "Download the playbook",
+    "cta_secondary": "Learn how it works"
+  },
+  "capabilities": {
+    "heading": "Five capabilities. One leadership identity.",
+    "subtext": "Each capability is taught through micro-moments, short practice tasks, and immediate reflection loops — ensuring learning is contextual, frequent, and measurable."
+  },
+  "how_it_works": {
+    "heading": "Grounded in behavioural science.",
+    "subtext": "Leadra translates evidence-based principles from leadership development, organisational behaviour, and coaching into a practical, in-the-moment learning system.",
+    "pillars": [
+      {
+        "number": "01",
+        "heading": "Deliberate practice",
+        "body": "Learning applied to real workplace tasks, with repeated and spaced practice, produces higher impact and better retention."
+      },
+      {
+        "number": "02",
+        "heading": "Behavioural principles",
+        "body": "Small, observable behaviours shaped by clear prompts and timely feedback produce measurable changes in how you lead."
+      },
+      {
+        "number": "03",
+        "heading": "Personalised feedback",
+        "body": "Combining micro-coaching with automated nudges increases self-efficacy and translates insight into real-world action."
+      }
+    ]
+  },
+  "playbook": {
+    "eyebrow": "Free resource",
+    "headline": "Start with the Emerging Leaders Playbook.",
+    "body": "A self-directed workbook covering five core leadership capabilities — with 7-day practice plans, reflection exercises, and in-the-moment scripts. Use it alongside the Leadra app or as a standalone resource.",
+    "modules": [
+      "Module 1: Emotional Regulation — 7-day practice",
+      "Module 2: Critical Thinking — decision filters and probes",
+      "Module 3: Situational Judgement — reading the moment",
+      "Module 4: Change Agility — staying steady through uncertainty",
+      "Module 5: Influence — coming soon"
+    ],
+    "cta": "Download free playbook",
+    "cta_subtext": "No sign-up required · PDF · Free"
+  },
+  "pricing": {
+    "heading": "Choose how you grow.",
+    "subtext": "Start free. Move to a plan when you're ready. No lock-in.",
+    "tiers": [
+      {
+        "name": "Essentials",
+        "price": "$0.00",
+        "price_period": "/month",
+        "tagline": "For individuals getting started",
+        "features": [
+          "Access to all 5 capability modules",
+          "7-day practice plans",
+          "Daily journaling and reflection",
+          "Basic pattern insights",
+          "Playbook download included"
+        ],
+        "cta": "Get started"
+      },
+      {
+        "name": "Professional",
+        "price": "$0.00",
+        "price_period": "/month",
+        "tagline": "For emerging leaders building real habits",
+        "features": [
+          "Everything in Essentials",
+          "Personalised weekly summaries",
+          "Micromoment tracking",
+          "Behavioural pattern detection",
+          "In-the-moment coaching nudges",
+          "Priority access to new modules"
+        ],
+        "cta": "Get started"
+      },
+      {
+        "name": "Enhanced",
+        "price": "$XX",
+        "price_period": "/month",
+        "tagline": "For teams and organisations",
+        "features": [
+          "Everything in Professional",
+          "Team dashboard (coming soon)",
+          "Cohort-based learning paths",
+          "Coach or manager visibility",
+          "Custom capability focus",
+          "Dedicated onboarding support"
+        ],
+        "cta": "Talk to us"
+      }
+    ],
+    "footnote_trial": "All plans include a 14-day free trial. Cancel any time.",
+    "footnote_testing": "Essentials and Professional are free while we're in testing — pricing will be introduced before general launch."
+  },
+  "community": {
+    "heading": "A community of leaders who reflect, not just react.",
+    "body": "The Leadra community is being built. A space for emerging leaders to share moments, compare patterns, and support each other's growth. Get early access when we launch.",
+    "form_button": "Notify me"
+  },
+  "get_access": {
+    "heading": "Ready to build your leadership identity?",
+    "subtext": "Leadra is available now as a web app. A Telegram mini app is coming soon. Start with the free playbook, or jump straight into the app.",
+    "cta_primary": "Access the web app",
+    "cta_secondary": "Download the playbook",
+    "fine_print": "Telegram mini app · Coming soon"
+  },
+  "footer": {
+    "tagline": "Leadership is built in moments.",
+    "copyright": "© 2026 Leadra Labs. All rights reserved."
+  }
+}
