@@ -1,0 +1,179 @@
+content:
+  - name: homepage_content
+    label: Homepage Content
+    type: file
+    path: content.json
+    fields:
+      - name: nav
+        label: Nav
+        type: object
+        fields:
+          - name: cta_button
+            label: CTA Button
+            type: string
+
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+          - name: headline
+            label: Headline
+            type: string
+          - name: subheadline
+            label: Subheadline
+            type: text
+          - name: cta_primary
+            label: Primary CTA
+            type: string
+          - name: cta_secondary
+            label: Secondary CTA
+            type: string
+
+      - name: capabilities
+        label: Capabilities
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: subtext
+            label: Subtext
+            type: text
+
+      - name: how_it_works
+        label: How It Works
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: subtext
+            label: Subtext
+            type: text
+          - name: pillars
+            label: Pillars
+            type: object
+            list: true
+            fields:
+              - name: number
+                label: Number
+                type: string
+              - name: heading
+                label: Heading
+                type: string
+              - name: body
+                label: Body
+                type: text
+
+      - name: playbook
+        label: Playbook
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+          - name: headline
+            label: Headline
+            type: string
+          - name: body
+            label: Body
+            type: text
+          - name: modules
+            label: Modules
+            type: string
+            list: true
+          - name: cta
+            label: CTA
+            type: string
+          - name: cta_subtext
+            label: CTA Subtext
+            type: string
+
+      - name: pricing
+        label: Pricing
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: subtext
+            label: Subtext
+            type: text
+          - name: tiers
+            label: Tiers
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Name
+                type: string
+              - name: price
+                label: Price
+                type: string
+              - name: price_period
+                label: Price Period
+                type: string
+              - name: tagline
+                label: Tagline
+                type: string
+              - name: features
+                label: Features
+                type: string
+                list: true
+              - name: cta
+                label: CTA
+                type: string
+          - name: footnote_trial
+            label: Footnote (Trial)
+            type: string
+          - name: footnote_testing
+            label: Footnote (Testing)
+            type: string
+
+      - name: community
+        label: Community
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: body
+            label: Body
+            type: text
+          - name: form_button
+            label: Form Button
+            type: string
+
+      - name: get_access
+        label: Get Access
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: subtext
+            label: Subtext
+            type: text
+          - name: cta_primary
+            label: Primary CTA
+            type: string
+          - name: cta_secondary
+            label: Secondary CTA
+            type: string
+          - name: fine_print
+            label: Fine Print
+            type: string
+
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - name: tagline
+            label: Tagline
+            type: string
+          - name: copyright
+            label: Copyright
+            type: string
