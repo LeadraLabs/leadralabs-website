@@ -1,17 +1,17 @@
 {
   "nav": {
-    "cta_button": "Get early access!"
+    "cta_button": "Free Trial "
   },
   "hero": {
     "eyebrow": "Practical support for real leadership challenges ",
     "headline": "Leadership is built in moments.",
-    "subheadline": "Leaders at every stage face moments that test their judgement, confidence and clarity. Whether you are stepping into leadership for the first time or have been leading for years, the challenges keep evolving. \n\nLeadra helps leaders grow through those moments. It provides practical behavioural insight you can use immediately, so you can lead with more clarity, confidence and impact. ",
-    "cta_primary": "Download the playbook",
+    "subheadline": "Leaders at every stage face moments that test their judgement, confidence and clarity. Whether you are stepping into leadership for the first time or have been leading for years, the challenges keep evolving. \n\nLeadra helps leaders grow through those moments. It provides practical behavioural insight you can use immediately, so you can lead with more clarity, focus and impact. ",
+    "cta_primary": "Download Leadra ",
     "cta_secondary": "Learn how it works"
   },
   "capabilities": {
-    "heading": "Five capabilities. One leadership identity.",
-    "subtext": "Each capability is taught through micro-moments, short practice tasks, and immediate reflection loops — ensuring learning is contextual, frequent, and measurable."
+    "heading": "Skills that make leadership feel easier",
+    "subtext": "Real leadership can feel messy. These capabilities help you navigate tough moments, reduce friction and lead with more intention. "
   },
   "how_it_works": {
     "heading": "Grounded in behavioural science.",
