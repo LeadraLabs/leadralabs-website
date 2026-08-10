@@ -190,7 +190,7 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 /* ---------- Hero ---------- */
 .hero {
   background: var(--off-white);
-  padding: 28px 0 40px;
+  padding: 20px 0 40px;
 }
 .hero .container {
   display: flex;
@@ -203,7 +203,7 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 .hero-text h1 {
   font-size: 52px;
   line-height: 1.15;
-  margin: 16px 0 16px;
+  margin: 20px 0 16px;
 }
 
 .hero-text p.sub {
@@ -236,6 +236,8 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 }
 
 /* ---------- Capabilities ---------- */
+#capabilities { padding-bottom: 28px; }
+
 .capabilities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -311,7 +313,7 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 }
 
 /* ---------- How it works ---------- */
-#how-it-works { padding-top: 28px; }
+#how-it-works { padding-top: 20px; }
 
 .pillars {
   display: grid;
