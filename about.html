@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Leadra Labs</title>
 <!-- NOVA: edit copy here -->
-<meta name="description" content="Leadra Labs is a behavioural development app for emerging leaders, built for the moments that matter. Learn what we're building and why.">
+<meta name="description" content="Leadra Labs is a behavioural development app for leaders at every stage, built for the moments that matter. Learn what we're building and why.">
 <meta property="og:title" content="About — Leadra Labs">
 <!-- NOVA: edit copy here -->
 <meta property="og:description" content="Leadership, built in real moments. Learn about Leadra Labs and what we're building.">
@@ -16,394 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #1A3560;
-    --gold: #E8961E;
-    --gold-hover: #C97D10;
-    --off-white: #F9F8F6;
-    --white: #FFFFFF;
-    --dark-text: #1C1C1C;
-    --muted-text: #5C5C5C;
-    --border: #E2E0DC;
-    --community-bg: #F2F0EB;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--dark-text);
-    background: var(--off-white);
-  }
-
-  img, svg { display: block; max-width: 100%; }
-
-  a { text-decoration: none; color: inherit; }
-
-  ul { list-style: none; }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  section { padding: 96px 0; }
-
-  h1, h2, h3 { font-weight: 600; color: var(--navy); }
-
-  h2.section-heading {
-    font-size: 36px;
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto 16px;
-  }
-
-  p.section-subtext {
-    font-size: 18px;
-    color: var(--muted-text);
-    text-align: center;
-    max-width: 620px;
-    margin: 0 auto 56px;
-  }
-
-  .eyebrow-pill {
-    display: inline-block;
-    background: var(--navy);
-    color: var(--white);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 6px 16px;
-    border-radius: 20px;
-  }
-
-  .eyebrow-gold {
-    display: inline-block;
-    background: rgba(232,150,30,0.12);
-    color: var(--gold-hover);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 20px;
-  }
-
-  .btn {
-    display: inline-block;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  }
-
-  .btn-gold {
-    background: var(--gold);
-    color: var(--white);
-    padding: 14px 28px;
-    border-radius: 24px;
-  }
-  .btn-gold:hover { background: var(--gold-hover); }
-
-  .btn-gold-sm {
-    background: var(--gold);
-    color: var(--white);
-    padding: 10px 22px;
-    border-radius: 24px;
-  }
-  .btn-gold-sm:hover { background: var(--gold-hover); }
-
-  .btn-outline-navy {
-    background: transparent;
-    color: var(--navy);
-    border: 1.5px solid var(--navy);
-    padding: 14px 28px;
-    border-radius: 24px;
-  }
-  .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
-
-  /* ---------- Nav ---------- */
-  header.site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--navy);
-    letter-spacing: 0.5px;
-  }
-  .logo .arrow { color: var(--gold); margin: 0 2px; }
-
-  nav.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-  }
-
-  nav.nav-links a {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--dark-text);
-  }
-  nav.nav-links a:hover { color: var(--gold-hover); }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--navy);
-  }
-
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 8px 24px 20px;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    padding: 12px 0;
-    font-size: 15px;
-    font-weight: 500;
-    border-bottom: 1px solid var(--border);
-  }
-  .mobile-menu a:last-child { border-bottom: none; }
-
-  /* ---------- Page header ---------- */
-  .page-header {
-    background: var(--off-white);
-    text-align: center;
-    padding: 72px 0 64px;
-  }
-  .page-header h1 {
-    font-size: 44px;
-    line-height: 1.2;
-    margin-top: 20px;
-  }
-
-  /* ---------- What is Leadra ---------- */
-  .prose {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  .prose p {
-    margin-bottom: 24px;
-    color: var(--dark-text);
-  }
-  .prose p:last-child { margin-bottom: 0; }
-
-  /* ---------- Founder ---------- */
-  .founder-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px;
-    max-width: 720px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-  }
-
-  .avatar-placeholder {
-    flex: 0 0 120px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: var(--navy);
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: 600;
-  }
-
-  .founder-card .founder-text p {
-    color: var(--dark-text);
-    margin-bottom: 16px;
-  }
-  .founder-card .founder-text p:last-child { margin-bottom: 0; }
-
-  .founder-note {
-    font-size: 13px;
-    color: var(--muted-text);
-    font-style: italic;
-    margin-bottom: 16px;
-  }
-
-  /* ---------- How we use AI (trust section) ---------- */
-  .trust-section {
-    background: var(--community-bg);
-  }
-
-  /* ---------- Roadmap ---------- */
-  .roadmap-intro {
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto 48px;
-    color: var(--muted-text);
-    font-size: 18px;
-  }
-
-  .roadmap-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-
-  .roadmap-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 32px 28px;
-  }
-
-  .roadmap-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(232,150,30,0.12);
-    color: var(--gold-hover);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
-
-  .roadmap-card h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-
-  .roadmap-card p {
-    color: var(--muted-text);
-  }
-
-  /* ---------- Closing CTA ---------- */
-  .get-access {
-    background: var(--off-white);
-    text-align: center;
-  }
-  .get-access h2 { margin-bottom: 16px; }
-  .get-access-ctas {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  /* ---------- Footer ---------- */
-  footer {
-    background: var(--navy);
-    color: var(--white);
-    padding: 72px 0 0;
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 48px;
-    padding-bottom: 56px;
-  }
-
-  .footer-logo {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 16px;
-  }
-  .footer-logo .arrow { color: var(--gold); margin: 0 2px; }
-
-  .footer-tagline {
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 20px;
-  }
-
-  .footer-copyright {
-    color: rgba(255,255,255,0.5);
-    font-size: 14px;
-  }
-
-  .footer-heading {
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--gold);
-    margin-bottom: 18px;
-  }
-
-  .footer-heading.second { margin-top: 28px; }
-
-  .footer-links li { margin-bottom: 12px; }
-  .footer-links a { color: rgba(255,255,255,0.85); font-size: 15px; }
-  .footer-links a:hover { color: var(--gold); }
-
-  .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.12);
-    padding: 24px 0;
-    text-align: center;
-    color: rgba(255,255,255,0.5);
-    font-size: 14px;
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 900px) {
-    .roadmap-grid { grid-template-columns: 1fr; gap: 24px; }
-    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-  }
-
-  @media (max-width: 768px) {
-    section { padding: 64px 0; }
-
-    nav.nav-links { display: none; }
-    .hamburger { display: block; }
-
-    .page-header h1 { font-size: 32px; }
-    h2.section-heading { font-size: 28px; }
-
-    .founder-card { flex-direction: column; align-items: center; text-align: center; }
-
-    .nav-right { gap: 12px; }
-    .nav-right .btn-gold-sm { display: none; }
-  }
-
-  @media (max-width: 480px) {
-    .get-access-ctas { flex-direction: column; align-items: stretch; }
-    .get-access-ctas .btn { text-align: center; }
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -414,7 +27,6 @@
     <nav class="nav-links">
       <a href="about.html">About</a>
       <a href="index.html#how-it-works">How it works</a>
-      <a href="index.html#playbook">The playbook</a>
       <a href="index.html#pricing">Pricing</a>
       <a href="index.html#community">Community</a>
     </nav>
@@ -426,7 +38,6 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="about.html">About</a>
     <a href="index.html#how-it-works">How it works</a>
-    <a href="index.html#playbook">The playbook</a>
     <a href="index.html#pricing">Pricing</a>
     <a href="index.html#community">Community</a>
   </div>
@@ -441,17 +52,18 @@
   </div>
 </section>
 
-<!-- ============ WHAT IS LEADRA ============ -->
+<!-- ============ HERO BODY ============ -->
 <section id="what-is-leadra">
   <div class="container">
-    <h2 class="section-heading">What Leadra is</h2>
     <div class="prose">
       <!-- NOVA: edit copy here -->
-      <p>Leadership doesn't happen in a classroom. It happens in the two minutes before a hard conversation, the moment you decide whether to speak up in a meeting, the week where everything shifts and you have to hold steady anyway.</p>
+      <p>Leadership is shaped in the moments you cannot plan for. The quiet pause before a hard conversation. The hesitation before you speak up. The weeks where everything shifts and your team needs you to stay steady. These moments define how people experience you, yet most leaders face them alone, relying on instinct or whatever they remember from training long ago.</p>
       <!-- NOVA: edit copy here -->
-      <p>Leadra is a behavioural development app built for exactly those moments. Instead of theory delivered in a workshop once a year, Leadra meets you in the moment itself — helping you notice what's happening, reflect on it, and build the five core capabilities that make up genuine leadership: Emotional Regulation, Critical Thinking, Situational Judgement, Change Agility, and Influence.</p>
+      <p>Leadra is a behavioural development app that supports you in those moments. It helps you slow down just enough to see what is really happening, understand your own patterns and choose a response that strengthens your leadership. Leadra gives you practical guidance you can use immediately, so your everyday moments become opportunities to grow rather than situations you simply try to get through.</p>
       <!-- NOVA: edit copy here -->
-      <p>We built Leadra in Australia, for emerging leaders and mid-career professionals who are done waiting for someone to hand them a leadership title before they start actually leading.</p>
+      <p>Leadership development matters because the demands on leaders are higher than ever. Teams need direction. Organisations need momentum. People need leaders who can regulate themselves, think clearly, read situations well, adapt to change and influence others without creating friction. These five capabilities shape real leadership, and Leadra helps you build them through simple, repeatable habits that fit into real life.</p>
+      <!-- NOVA: edit copy here -->
+      <p>Leadra was created in Australia for leaders at every stage of their journey. Emerging leaders finding their footing. Mid-career leaders navigating complexity. Senior and C-suite leaders carrying the weight of organisational impact. No matter where you sit, the moments that matter keep coming. Leadra helps you meet them well.</p>
     </div>
   </div>
 </section>
@@ -461,13 +73,19 @@
   <div class="container">
     <h2 class="section-heading">Meet the founder</h2>
     <div class="founder-card">
+      <!-- TODO: replace with Nova's headshot -->
       <div class="avatar-placeholder">NJ</div>
       <div class="founder-text">
-        <!-- NOVA: replace this entire section with your real bio — background, what led you to
-             build Leadra, anything personal you want to share. Keep it specific and personal rather
-             than generic "passionate about helping people" language. -->
-        <p class="founder-note">Placeholder bio — replace before launch.</p>
-        <p>Leadra was founded by Nova Jackson, who leads content and strategy for the platform. [Placeholder bio — 2-3 sentences on background and what drew Nova to leadership development and building Leadra.]</p>
+        <!-- NOVA: edit copy here -->
+        <h3>Nova Jackson</h3>
+        <!-- NOVA: edit copy here -->
+        <p>Nova Jackson has spent more than fifteen years helping leaders grow across large and complex organisations in the UK and Australia. With a degree in applied psychology, she has built her career around understanding how people think, learn and lead, and how small behavioural shifts can create meaningful change in teams and organisations.</p>
+        <!-- NOVA: edit copy here -->
+        <p>Her work spans the full spectrum of leadership development. She has designed and delivered learning and development programs based on a spectrum of adult learning principles, built leadership frameworks, shaped early-career pathways and led strategic talent initiatives and created pathways that support leaders from emerging through to executive levels. Nova's experience in organisational development and culture transformation has given her a deep understanding of how leaders influence the systems around them, and how those systems in turn shape behaviour.</p>
+        <!-- NOVA: edit copy here -->
+        <p>She is trained in adult learning principles and has spent years coaching leaders and teams using tools like the Human Synergistics Group Styles Inventory (GSI) and Life Styles Inventory (LSI), helping them understand their patterns, strengthen their impact and build healthier team dynamics. Her work in team effectiveness, leadership coaching and behavioural change has made her a trusted partner for leaders navigating complexity, growth and organisational pressure.</p>
+        <!-- NOVA: edit copy here -->
+        <p>Nova founded Leadra to bring all of this experience into a tool leaders can use every day. After years of watching leaders receive development only in workshops or annual programs where theory and models prevailed, she set out to create something more practical, tangible and human: a behavioural development app that supports leaders in the moments that matter, helping them build clarity, confidence and the capabilities that define genuine leadership.</p>
       </div>
     </div>
   </div>
@@ -479,36 +97,40 @@
     <h2 class="section-heading">How we use AI</h2>
     <div class="prose">
       <!-- NOVA: edit copy here -->
-      <p>Leadra uses AI — specifically, models built by Anthropic — to read your reflections and offer personalised suggestions. We want to be upfront about what that means and what it doesn't.</p>
+      <p>Leadra uses AI models built by Anthropic to help you make sense of your reflections, and we want to be upfront about what that means. When you enter a journal entry, the AI looks for patterns in what you've written and offers a short, practical next step linked to one of the five core leadership capabilities: Emotional Regulation, Critical Thinking, Situational Judgement, Change Agility and Influence. Every micro-moment and summary is designed to strengthen one of these capabilities in a way that feels simple and immediately useful.</p>
       <!-- NOVA: edit copy here -->
-      <p>The AI isn't a therapist, and it isn't trying to be one. It's a tool for noticing patterns and offering a next step, the way a good mentor might jot a thought in the margin of your notebook. It doesn't diagnose, it doesn't judge, and it's built with clear guardrails so it never implies verdicts about your workplace, your colleagues, or your manager — it reflects your experience back to you, it doesn't referee it.</p>
+      <p>The AI is not a therapist, and it is not trying to act like one. It works more like a thoughtful mentor who reads your notes and offers a gentle nudge to help you see the moment more clearly. It does not diagnose, judge or make assumptions about your workplace or the people in it. Its only job is to reflect your experience back to you so you can grow from it.</p>
       <!-- NOVA: edit copy here -->
-      <p>Your reflections are yours. We don't sell your data, and we've built Leadra so the AI's only job is to help you see yourself more clearly.</p>
+      <p>Your reflections are yours. We do not sell your data, and the AI exists for one purpose: to help you strengthen the capabilities that make real leadership possible.</p>
     </div>
   </div>
 </section>
 
 <!-- ============ WHERE WE'RE HEADED ============ -->
-<!-- NOVA: add/adjust roadmap items here, and any timeline language you're comfortable committing to -->
 <section id="roadmap">
   <div class="container">
     <h2 class="section-heading">Where we're headed</h2>
-    <p class="roadmap-intro">Leadra today is just the start. We're building toward:</p>
     <div class="roadmap-grid">
       <div class="roadmap-card">
         <div class="roadmap-icon">01</div>
-        <h3>Live workshops</h3>
-        <p>Sessions that bring the five capabilities to life beyond the app, run by people who've actually led through hard moments.</p>
+        <!-- NOVA: edit copy here -->
+        <h3>Team Development</h3>
+        <!-- NOVA: edit copy here -->
+        <p>Strong teams are built on the patterns they repeat every day. Soon, Leadra will offer team-based development focusing on the unique challenges faced by teams to strengthen relationships, build effectiveness and ways of working that support organisational culture.</p>
       </div>
       <div class="roadmap-card">
         <div class="roadmap-icon">02</div>
-        <h3>A real community</h3>
-        <p>A space for emerging leaders to compare notes, share what's working, and support each other through the moments the app can't fully capture on its own.</p>
+        <!-- NOVA: edit copy here -->
+        <h3>Organisation Development</h3>
+        <!-- NOVA: edit copy here -->
+        <p>Leadership shapes culture, and culture shapes performance. We're building a version of Leadra designed specifically for organisations that want leadership development to be consistent, scalable and aligned to their own frameworks. It will give leaders real-time behavioural insight, help organisations track growth across your own capabilities and embed leadership development into everyday work, not just into programs.</p>
       </div>
       <div class="roadmap-card">
         <div class="roadmap-icon">03</div>
-        <h3>Cohort-based learning</h3>
-        <p>For teams and organisations who want to build these capabilities together, not just individually.</p>
+        <!-- NOVA: edit copy here -->
+        <h3>A real community</h3>
+        <!-- NOVA: edit copy here -->
+        <p>A space for leaders at all levels to compare notes, share what's working and connect with mentors to provide support through the moments the app can't fully capture on its own.</p>
       </div>
     </div>
   </div>
@@ -518,10 +140,9 @@
 <section class="get-access">
   <div class="container">
     <!-- NOVA: edit copy here -->
-    <h2 class="section-heading">Want to be part of where we're going?</h2>
+    <h2 class="section-heading">Ready to build your leadership identity?</h2>
     <div class="get-access-ctas">
       <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Access the web app</a>
-      <a href="#" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Get early access</a>
     </div>
   </div>
 </section>
@@ -540,7 +161,6 @@
         <div class="footer-heading">Product</div>
         <ul class="footer-links">
           <li><a href="index.html#how-it-works">How it works</a></li>
-          <li><a href="index.html#playbook">The playbook</a></li>
           <li><a href="index.html#pricing">Pricing</a></li>
           <li><a href="index.html#community">Community</a></li>
         </ul>
