@@ -47,28 +47,28 @@
 <section class="capability-page-header">
   <div class="container">
     <!-- NOVA: edit copy here -->
-    <h1 class="capability-pill">Critical Thinking</h1>
+    <h1 class="capability-pill" data-content="capabilities_pages.critical_thinking.pill">Critical Thinking</h1>
     <!-- NOVA: edit copy here -->
-    <h2>The Capability That Cuts Through the Noise</h2>
+    <h2 data-content="capabilities_pages.critical_thinking.subtitle">The Capability That Cuts Through the Noise</h2>
   </div>
 </section>
 
 <!-- ============ BODY ============ -->
 <section id="capability-body">
   <div class="container">
-    <div class="prose">
+    <div class="prose" data-content-list="capabilities_pages.critical_thinking.paragraphs">
       <!-- NOVA: edit copy here -->
-      <p>Critical thinking is the leadership capability that helps you slow the rush, clear the fog and get to the heart of what actually matters. It's the discipline of stepping back from assumptions, pressure and noise so you can see a situation for what it is, not just what it feels like. Leaders who think critically make better decisions, ask sharper questions and avoid being pulled off-course by urgency, emotion or group momentum.</p>
+      <p data-field="text">Critical thinking is the leadership capability that helps you slow the rush, clear the fog and get to the heart of what actually matters. It's the discipline of stepping back from assumptions, pressure and noise so you can see a situation for what it is, not just what it feels like. Leaders who think critically make better decisions, ask sharper questions and avoid being pulled off-course by urgency, emotion or group momentum.</p>
       <!-- NOVA: edit copy here -->
-      <p>At every level of leadership, critical thinking is what keeps decisions grounded and intentional. Emerging leaders use it to build credibility and avoid reactive choices. Mid-career leaders rely on it to navigate complexity and competing priorities. Senior and C-suite leaders depend on it to make calls that shape strategy, culture and long-term direction. When critical thinking is strong, leaders create clarity for themselves and everyone around them.</p>
+      <p data-field="text">At every level of leadership, critical thinking is what keeps decisions grounded and intentional. Emerging leaders use it to build credibility and avoid reactive choices. Mid-career leaders rely on it to navigate complexity and competing priorities. Senior and C-suite leaders depend on it to make calls that shape strategy, culture and long-term direction. When critical thinking is strong, leaders create clarity for themselves and everyone around them.</p>
       <!-- NOVA: edit copy here -->
-      <p>But when critical thinking slips, the consequences can be significant. Leaders jump to conclusions, misread situations or act on incomplete information. Teams waste time solving the wrong problem. Decisions become reactive rather than strategic. Bias creeps in, blind spots widen and leaders start responding to symptoms instead of causes. Over time, this erodes trust, slows progress and creates a culture where people default to speed over sense.</p>
+      <p data-field="text">But when critical thinking slips, the consequences can be significant. Leaders jump to conclusions, misread situations or act on incomplete information. Teams waste time solving the wrong problem. Decisions become reactive rather than strategic. Bias creeps in, blind spots widen and leaders start responding to symptoms instead of causes. Over time, this erodes trust, slows progress and creates a culture where people default to speed over sense.</p>
     </div>
 
-    <h2 class="capability-supports-heading">How Leadra supports Critical Thinking</h2>
+    <h2 class="capability-supports-heading" data-content="capabilities_pages.critical_thinking.supports_heading">How Leadra supports Critical Thinking</h2>
     <div class="prose">
       <!-- NOVA: edit copy here -->
-      <p>Leadra strengthens critical thinking by helping you pause long enough to examine what's really happening. Through quick reflections and targeted prompts, Leadra encourages you to question assumptions, separate facts from interpretations and consider alternative perspectives before acting. These small moments of clarity build a habit of slowing down, thinking more deliberately and making decisions that are grounded rather than reactive, elevating leadership at every level.</p>
+      <p data-content="capabilities_pages.critical_thinking.supports_body">Leadra strengthens critical thinking by helping you pause long enough to examine what's really happening. Through quick reflections and targeted prompts, Leadra encourages you to question assumptions, separate facts from interpretations and consider alternative perspectives before acting. These small moments of clarity build a habit of slowing down, thinking more deliberately and making decisions that are grounded rather than reactive, elevating leadership at every level.</p>
     </div>
   </div>
 </section>
@@ -129,6 +129,97 @@
       document.getElementById('mobileMenu').classList.remove('open');
     });
   });
+</script>
+
+<!--
+  Loads page copy from content.json and populates it into the page.
+  If content.json is missing, unreachable, or malformed, this silently does nothing
+  and the hardcoded text already in the HTML above is shown instead (fallback).
+-->
+<script>
+  function getByPath(obj, path) {
+    return path.split('.').reduce(function (value, key) {
+      return (value === undefined || value === null) ? undefined : value[key];
+    }, obj);
+  }
+
+  function applySimpleFields(root, content) {
+    root.querySelectorAll('[data-content]').forEach(function (el) {
+      var value = getByPath(content, el.getAttribute('data-content'));
+      if (typeof value === 'string' && value.length > 0) {
+        el.textContent = value;
+      }
+    });
+  }
+
+  function applyFieldsToCard(card, item) {
+    card.querySelectorAll('[data-field]').forEach(function (el) {
+      var field = el.getAttribute('data-field');
+      var value = item[field];
+      if (typeof value === 'string' && value.length > 0) {
+        el.textContent = value;
+      }
+    });
+    card.querySelectorAll('[data-field-list]').forEach(function (listEl) {
+      var items = item[listEl.getAttribute('data-field-list')];
+      if (Array.isArray(items) && items.length > 0) {
+        populateList(listEl, items, function (li, text) {
+          var textEl = li.querySelector('[data-field="text"]');
+          if (textEl && typeof text === 'string') {
+            textEl.textContent = text;
+          }
+        });
+      }
+    });
+  }
+
+  function populateList(container, items, fillItem) {
+    var template = container.children[0];
+    if (!template) return;
+    var templateClone = template.cloneNode(true);
+
+    items.forEach(function (item, index) {
+      var node = index === 0 ? template : templateClone.cloneNode(true);
+      fillItem(node, item);
+      if (index > 0) {
+        container.appendChild(node);
+      }
+    });
+
+    // Remove any leftover static entries beyond what content.json provided
+    while (container.children.length > items.length) {
+      container.removeChild(container.lastElementChild);
+    }
+  }
+
+  function applyContentLists(root, content) {
+    root.querySelectorAll('[data-content-list]').forEach(function (container) {
+      var items = getByPath(content, container.getAttribute('data-content-list'));
+      if (!Array.isArray(items) || items.length === 0) return;
+
+      populateList(container, items, function (node, item) {
+        if (typeof item === 'string') {
+          var textEl = node.querySelector('[data-field="text"]');
+          if (textEl) textEl.textContent = item;
+        } else if (item && typeof item === 'object') {
+          applyFieldsToCard(node, item);
+        }
+      });
+    });
+  }
+
+  fetch('../content.json')
+    .then(function (response) {
+      if (!response.ok) throw new Error('content.json not found');
+      return response.json();
+    })
+    .then(function (content) {
+      applyContentLists(document, content);
+      applySimpleFields(document, content);
+    })
+    .catch(function () {
+      // content.json missing or invalid — hardcoded fallback text stays as-is
+    });
 </script>
 
 </body>

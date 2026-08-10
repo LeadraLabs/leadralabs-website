@@ -147,3 +147,159 @@ content:
           - name: copyright
             label: Copyright
             type: string
+
+      - name: about
+        label: About Page
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+          - name: headline
+            label: Headline
+            type: string
+          - name: hero_paragraphs
+            label: Hero Paragraphs
+            type: string
+            list: true
+          - name: founder
+            label: Founder
+            type: object
+            fields:
+              - name: name
+                label: Name
+                type: string
+              - name: paragraphs
+                label: Bio Paragraphs
+                type: string
+                list: true
+          - name: how_we_use_ai
+            label: How We Use AI
+            type: object
+            fields:
+              - name: paragraphs
+                label: Paragraphs
+                type: string
+                list: true
+          - name: roadmap
+            label: Roadmap
+            type: object
+            list: true
+            fields:
+              - name: number
+                label: Number
+                type: string
+              - name: heading
+                label: Heading
+                type: string
+              - name: body
+                label: Body
+                type: text
+          - name: get_access_heading
+            label: Closing CTA Heading
+            type: string
+
+      - name: capabilities_pages
+        label: Capability Pages
+        type: object
+        fields:
+          - name: emotional_regulation
+            label: Emotional Regulation
+            type: object
+            fields:
+              - name: pill
+                label: Pill Label
+                type: string
+              - name: subtitle
+                label: Subtitle
+                type: string
+              - name: paragraphs
+                label: Body Paragraphs
+                type: string
+                list: true
+              - name: supports_heading
+                label: "How Leadra Supports — Heading"
+                type: string
+              - name: supports_body
+                label: "How Leadra Supports — Body"
+                type: text
+          - name: critical_thinking
+            label: Critical Thinking
+            type: object
+            fields:
+              - name: pill
+                label: Pill Label
+                type: string
+              - name: subtitle
+                label: Subtitle
+                type: string
+              - name: paragraphs
+                label: Body Paragraphs
+                type: string
+                list: true
+              - name: supports_heading
+                label: "How Leadra Supports — Heading"
+                type: string
+              - name: supports_body
+                label: "How Leadra Supports — Body"
+                type: text
+          - name: situational_judgement
+            label: Situational Judgement
+            type: object
+            fields:
+              - name: pill
+                label: Pill Label
+                type: string
+              - name: subtitle
+                label: Subtitle
+                type: string
+              - name: paragraphs
+                label: Body Paragraphs
+                type: string
+                list: true
+              - name: supports_heading
+                label: "How Leadra Supports — Heading"
+                type: string
+              - name: supports_body
+                label: "How Leadra Supports — Body"
+                type: text
+          - name: change_agility
+            label: Change Agility
+            type: object
+            fields:
+              - name: pill
+                label: Pill Label
+                type: string
+              - name: subtitle
+                label: Subtitle
+                type: string
+              - name: paragraphs
+                label: Body Paragraphs
+                type: string
+                list: true
+              - name: supports_heading
+                label: "How Leadra Supports — Heading"
+                type: string
+              - name: supports_body
+                label: "How Leadra Supports — Body"
+                type: text
+          - name: influence
+            label: Influence
+            type: object
+            fields:
+              - name: pill
+                label: Pill Label
+                type: string
+              - name: subtitle
+                label: Subtitle
+                type: string
+              - name: paragraphs
+                label: Body Paragraphs
+                type: string
+                list: true
+              - name: supports_heading
+                label: "How Leadra Supports — Heading"
+                type: string
+              - name: supports_body
+                label: "How Leadra Supports — Body"
+                type: text

@@ -47,30 +47,30 @@
 <section class="capability-page-header">
   <div class="container">
     <!-- NOVA: edit copy here -->
-    <h1 class="capability-pill">Emotional Regulation</h1>
+    <h1 class="capability-pill" data-content="capabilities_pages.emotional_regulation.pill">Emotional Regulation</h1>
     <!-- NOVA: edit copy here -->
-    <h2>The Capability That Holds Everything Together</h2>
+    <h2 data-content="capabilities_pages.emotional_regulation.subtitle">The Capability That Holds Everything Together</h2>
   </div>
 </section>
 
 <!-- ============ BODY ============ -->
 <section id="capability-body">
   <div class="container">
-    <div class="prose">
+    <div class="prose" data-content-list="capabilities_pages.emotional_regulation.paragraphs">
       <!-- NOVA: edit copy here -->
-      <p>Emotional regulation is one of the most important (and most underestimated!) leadership capabilities. It's the ability to steady yourself when the stakes are high, the pressure is rising or the moment catches you off-guard. Leaders who regulate well create psychological safety, make clearer decisions and set the tone for how their team responds to challenge. It's not about suppressing emotion; it's about staying grounded enough to choose how you show up.</p>
+      <p data-field="text">Emotional regulation is one of the most important (and most underestimated!) leadership capabilities. It's the ability to steady yourself when the stakes are high, the pressure is rising or the moment catches you off-guard. Leaders who regulate well create psychological safety, make clearer decisions and set the tone for how their team responds to challenge. It's not about suppressing emotion; it's about staying grounded enough to choose how you show up.</p>
       <!-- NOVA: edit copy here -->
-      <p>At every level of leadership, emotional regulation is the difference between reacting and responding. For emerging leaders, it builds trust and credibility. For mid-career leaders, it prevents friction and keeps momentum. For senior and C-suite leaders, it shapes culture, stabilises teams and protects decision quality when the pressure is intense.</p>
+      <p data-field="text">At every level of leadership, emotional regulation is the difference between reacting and responding. For emerging leaders, it builds trust and credibility. For mid-career leaders, it prevents friction and keeps momentum. For senior and C-suite leaders, it shapes culture, stabilises teams and protects decision quality when the pressure is intense.</p>
       <!-- NOVA: edit copy here -->
-      <p>But when emotional regulation goes wrong, the impact is immediate and far-reaching. Reactivity spreads quickly. Teams become cautious or defensive. Small issues escalate because people are responding to the leader's emotion rather than the actual problem. Decision-making narrows, relationships strain and the leader's influence starts to erode. Over time, this creates a culture where people hesitate, avoid risk and stop bringing their best thinking forward.</p>
+      <p data-field="text">But when emotional regulation goes wrong, the impact is immediate and far-reaching. Reactivity spreads quickly. Teams become cautious or defensive. Small issues escalate because people are responding to the leader's emotion rather than the actual problem. Decision-making narrows, relationships strain and the leader's influence starts to erode. Over time, this creates a culture where people hesitate, avoid risk and stop bringing their best thinking forward.</p>
       <!-- NOVA: edit copy here -->
-      <p>Strong emotional regulation is the foundation that allows every other capability to work: clear thinking, sound judgement, adaptability and influencing others. When leaders can steady themselves, they can steady everyone else.</p>
+      <p data-field="text">Strong emotional regulation is the foundation that allows every other capability to work: clear thinking, sound judgement, adaptability and influencing others. When leaders can steady themselves, they can steady everyone else.</p>
     </div>
 
-    <h2 class="capability-supports-heading">How Leadra supports Emotional Regulation</h2>
+    <h2 class="capability-supports-heading" data-content="capabilities_pages.emotional_regulation.supports_heading">How Leadra supports Emotional Regulation</h2>
     <div class="prose">
       <!-- NOVA: edit copy here -->
-      <p>Leadra helps leaders strengthen emotional regulation in the moments it matters most. Through quick reflections and simple behavioural nudges, Leadra helps you notice what's happening in your body and mind, understand the trigger behind the emotion and choose a steadier response. Over time, these micro-moments build a habit of pausing, grounding and responding with intention — the kind of emotional steadiness your team can feel immediately.</p>
+      <p data-content="capabilities_pages.emotional_regulation.supports_body">Leadra helps leaders strengthen emotional regulation in the moments it matters most. Through quick reflections and simple behavioural nudges, Leadra helps you notice what's happening in your body and mind, understand the trigger behind the emotion and choose a steadier response. Over time, these micro-moments build a habit of pausing, grounding and responding with intention — the kind of emotional steadiness your team can feel immediately.</p>
     </div>
   </div>
 </section>
@@ -131,6 +131,97 @@
       document.getElementById('mobileMenu').classList.remove('open');
     });
   });
+</script>
+
+<!--
+  Loads page copy from content.json and populates it into the page.
+  If content.json is missing, unreachable, or malformed, this silently does nothing
+  and the hardcoded text already in the HTML above is shown instead (fallback).
+-->
+<script>
+  function getByPath(obj, path) {
+    return path.split('.').reduce(function (value, key) {
+      return (value === undefined || value === null) ? undefined : value[key];
+    }, obj);
+  }
+
+  function applySimpleFields(root, content) {
+    root.querySelectorAll('[data-content]').forEach(function (el) {
+      var value = getByPath(content, el.getAttribute('data-content'));
+      if (typeof value === 'string' && value.length > 0) {
+        el.textContent = value;
+      }
+    });
+  }
+
+  function applyFieldsToCard(card, item) {
+    card.querySelectorAll('[data-field]').forEach(function (el) {
+      var field = el.getAttribute('data-field');
+      var value = item[field];
+      if (typeof value === 'string' && value.length > 0) {
+        el.textContent = value;
+      }
+    });
+    card.querySelectorAll('[data-field-list]').forEach(function (listEl) {
+      var items = item[listEl.getAttribute('data-field-list')];
+      if (Array.isArray(items) && items.length > 0) {
+        populateList(listEl, items, function (li, text) {
+          var textEl = li.querySelector('[data-field="text"]');
+          if (textEl && typeof text === 'string') {
+            textEl.textContent = text;
+          }
+        });
+      }
+    });
+  }
+
+  function populateList(container, items, fillItem) {
+    var template = container.children[0];
+    if (!template) return;
+    var templateClone = template.cloneNode(true);
+
+    items.forEach(function (item, index) {
+      var node = index === 0 ? template : templateClone.cloneNode(true);
+      fillItem(node, item);
+      if (index > 0) {
+        container.appendChild(node);
+      }
+    });
+
+    // Remove any leftover static entries beyond what content.json provided
+    while (container.children.length > items.length) {
+      container.removeChild(container.lastElementChild);
+    }
+  }
+
+  function applyContentLists(root, content) {
+    root.querySelectorAll('[data-content-list]').forEach(function (container) {
+      var items = getByPath(content, container.getAttribute('data-content-list'));
+      if (!Array.isArray(items) || items.length === 0) return;
+
+      populateList(container, items, function (node, item) {
+        if (typeof item === 'string') {
+          var textEl = node.querySelector('[data-field="text"]');
+          if (textEl) textEl.textContent = item;
+        } else if (item && typeof item === 'object') {
+          applyFieldsToCard(node, item);
+        }
+      });
+    });
+  }
+
+  fetch('../content.json')
+    .then(function (response) {
+      if (!response.ok) throw new Error('content.json not found');
+      return response.json();
+    })
+    .then(function (content) {
+      applyContentLists(document, content);
+      applySimpleFields(document, content);
+    })
+    .catch(function () {
+      // content.json missing or invalid — hardcoded fallback text stays as-is
+    });
 </script>
 
 </body>

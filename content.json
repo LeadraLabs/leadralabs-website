@@ -99,5 +99,104 @@
   "footer": {
     "tagline": "Leadership is built in moments.",
     "copyright": "© 2026 Leadra Labs. All rights reserved."
+  },
+  "about": {
+    "eyebrow": "About Leadra Labs",
+    "headline": "Leadership, built in real moments.",
+    "hero_paragraphs": [
+      "Leadership is shaped in the moments you cannot plan for. The quiet pause before a hard conversation. The hesitation before you speak up. The weeks where everything shifts and your team needs you to stay steady. These moments define how people experience you, yet most leaders face them alone, relying on instinct or whatever they remember from training long ago.",
+      "Leadra is a behavioural development app that supports you in those moments. It helps you slow down just enough to see what is really happening, understand your own patterns and choose a response that strengthens your leadership. Leadra gives you practical guidance you can use immediately, so your everyday moments become opportunities to grow rather than situations you simply try to get through.",
+      "Leadership development matters because the demands on leaders are higher than ever. Teams need direction. Organisations need momentum. People need leaders who can regulate themselves, think clearly, read situations well, adapt to change and influence others without creating friction. These five capabilities shape real leadership, and Leadra helps you build them through simple, repeatable habits that fit into real life.",
+      "Leadra was created in Australia for leaders at every stage of their journey. Emerging leaders finding their footing. Mid-career leaders navigating complexity. Senior and C-suite leaders carrying the weight of organisational impact. No matter where you sit, the moments that matter keep coming. Leadra helps you meet them well."
+    ],
+    "founder": {
+      "name": "Nova Jackson",
+      "paragraphs": [
+        "Nova Jackson has spent more than fifteen years helping leaders grow across large and complex organisations in the UK and Australia. With a degree in applied psychology, she has built her career around understanding how people think, learn and lead, and how small behavioural shifts can create meaningful change in teams and organisations.",
+        "Her work spans the full spectrum of leadership development. She has designed and delivered learning and development programs based on a spectrum of adult learning principles, built leadership frameworks, shaped early-career pathways and led strategic talent initiatives and created pathways that support leaders from emerging through to executive levels. Nova's experience in organisational development and culture transformation has given her a deep understanding of how leaders influence the systems around them, and how those systems in turn shape behaviour.",
+        "She is trained in adult learning principles and has spent years coaching leaders and teams using tools like the Human Synergistics Group Styles Inventory (GSI) and Life Styles Inventory (LSI), helping them understand their patterns, strengthen their impact and build healthier team dynamics. Her work in team effectiveness, leadership coaching and behavioural change has made her a trusted partner for leaders navigating complexity, growth and organisational pressure.",
+        "Nova founded Leadra to bring all of this experience into a tool leaders can use every day. After years of watching leaders receive development only in workshops or annual programs where theory and models prevailed, she set out to create something more practical, tangible and human: a behavioural development app that supports leaders in the moments that matter, helping them build clarity, confidence and the capabilities that define genuine leadership."
+      ]
+    },
+    "how_we_use_ai": {
+      "paragraphs": [
+        "Leadra uses AI models built by Anthropic to help you make sense of your reflections, and we want to be upfront about what that means. When you enter a journal entry, the AI looks for patterns in what you've written and offers a short, practical next step linked to one of the five core leadership capabilities: Emotional Regulation, Critical Thinking, Situational Judgement, Change Agility and Influence. Every micro-moment and summary is designed to strengthen one of these capabilities in a way that feels simple and immediately useful.",
+        "The AI is not a therapist, and it is not trying to act like one. It works more like a thoughtful mentor who reads your notes and offers a gentle nudge to help you see the moment more clearly. It does not diagnose, judge or make assumptions about your workplace or the people in it. Its only job is to reflect your experience back to you so you can grow from it.",
+        "Your reflections are yours. We do not sell your data, and the AI exists for one purpose: to help you strengthen the capabilities that make real leadership possible."
+      ]
+    },
+    "roadmap": [
+      {
+        "number": "01",
+        "heading": "Team Development",
+        "body": "Strong teams are built on the patterns they repeat every day. Soon, Leadra will offer team-based development focusing on the unique challenges faced by teams to strengthen relationships, build effectiveness and ways of working that support organisational culture."
+      },
+      {
+        "number": "02",
+        "heading": "Organisation Development",
+        "body": "Leadership shapes culture, and culture shapes performance. We're building a version of Leadra designed specifically for organisations that want leadership development to be consistent, scalable and aligned to their own frameworks. It will give leaders real-time behavioural insight, help organisations track growth across your own capabilities and embed leadership development into everyday work, not just into programs."
+      },
+      {
+        "number": "03",
+        "heading": "A real community",
+        "body": "A space for leaders at all levels to compare notes, share what's working and connect with mentors to provide support through the moments the app can't fully capture on its own."
+      }
+    ],
+    "get_access_heading": "Ready to build your leadership identity?"
+  },
+  "capabilities_pages": {
+    "emotional_regulation": {
+      "pill": "Emotional Regulation",
+      "subtitle": "The Capability That Holds Everything Together",
+      "paragraphs": [
+        "Emotional regulation is one of the most important (and most underestimated!) leadership capabilities. It's the ability to steady yourself when the stakes are high, the pressure is rising or the moment catches you off-guard. Leaders who regulate well create psychological safety, make clearer decisions and set the tone for how their team responds to challenge. It's not about suppressing emotion; it's about staying grounded enough to choose how you show up.",
+        "At every level of leadership, emotional regulation is the difference between reacting and responding. For emerging leaders, it builds trust and credibility. For mid-career leaders, it prevents friction and keeps momentum. For senior and C-suite leaders, it shapes culture, stabilises teams and protects decision quality when the pressure is intense.",
+        "But when emotional regulation goes wrong, the impact is immediate and far-reaching. Reactivity spreads quickly. Teams become cautious or defensive. Small issues escalate because people are responding to the leader's emotion rather than the actual problem. Decision-making narrows, relationships strain and the leader's influence starts to erode. Over time, this creates a culture where people hesitate, avoid risk and stop bringing their best thinking forward.",
+        "Strong emotional regulation is the foundation that allows every other capability to work: clear thinking, sound judgement, adaptability and influencing others. When leaders can steady themselves, they can steady everyone else."
+      ],
+      "supports_heading": "How Leadra supports Emotional Regulation",
+      "supports_body": "Leadra helps leaders strengthen emotional regulation in the moments it matters most. Through quick reflections and simple behavioural nudges, Leadra helps you notice what's happening in your body and mind, understand the trigger behind the emotion and choose a steadier response. Over time, these micro-moments build a habit of pausing, grounding and responding with intention — the kind of emotional steadiness your team can feel immediately."
+    },
+    "critical_thinking": {
+      "pill": "Critical Thinking",
+      "subtitle": "The Capability That Cuts Through the Noise",
+      "paragraphs": [
+        "Critical thinking is the leadership capability that helps you slow the rush, clear the fog and get to the heart of what actually matters. It's the discipline of stepping back from assumptions, pressure and noise so you can see a situation for what it is, not just what it feels like. Leaders who think critically make better decisions, ask sharper questions and avoid being pulled off-course by urgency, emotion or group momentum.",
+        "At every level of leadership, critical thinking is what keeps decisions grounded and intentional. Emerging leaders use it to build credibility and avoid reactive choices. Mid-career leaders rely on it to navigate complexity and competing priorities. Senior and C-suite leaders depend on it to make calls that shape strategy, culture and long-term direction. When critical thinking is strong, leaders create clarity for themselves and everyone around them.",
+        "But when critical thinking slips, the consequences can be significant. Leaders jump to conclusions, misread situations or act on incomplete information. Teams waste time solving the wrong problem. Decisions become reactive rather than strategic. Bias creeps in, blind spots widen and leaders start responding to symptoms instead of causes. Over time, this erodes trust, slows progress and creates a culture where people default to speed over sense."
+      ],
+      "supports_heading": "How Leadra supports Critical Thinking",
+      "supports_body": "Leadra strengthens critical thinking by helping you pause long enough to examine what's really happening. Through quick reflections and targeted prompts, Leadra encourages you to question assumptions, separate facts from interpretations and consider alternative perspectives before acting. These small moments of clarity build a habit of slowing down, thinking more deliberately and making decisions that are grounded rather than reactive, elevating leadership at every level."
+    },
+    "situational_judgement": {
+      "pill": "Situational Judgement",
+      "subtitle": "The Capability That Helps Leaders Read the Moment",
+      "paragraphs": [
+        "Situational judgement is the ability to understand what a moment requires — not in theory, but in real time. It's the skill of reading context, sensing dynamics, weighing risks and choosing the right approach for the situation in front of you. Leaders with strong situational judgement know when to step in, when to step back, when to push and when to pause. They navigate complexity with clarity because they can see the whole picture, not just the part that's loudest.",
+        "When situational judgement slips, leaders misread cues, act too quickly or wait too long. Teams become confused because the leader's actions don't match the moment. Opportunities are missed, issues escalate and decisions feel inconsistent or out of sync with what people need. Over time, this erodes confidence and creates a culture where people second-guess direction rather than trust it."
+      ],
+      "supports_heading": "How Leadra supports Situational Judgement",
+      "supports_body": "Leadra strengthens situational judgement by helping you slow down and examine the moment more clearly. Through quick reflections and targeted prompts, it encourages you to consider context, dynamics and possible outcomes before acting. These micro-pauses build a habit of reading situations with more accuracy and responding with intention, keeping teams aligned and moving in the right direction."
+    },
+    "change_agility": {
+      "pill": "Change Agility",
+      "subtitle": "The Capability That Keeps Leaders Moving Forward",
+      "paragraphs": [
+        "Change agility is the ability to stay steady, curious and adaptive when things shift (which they always do!). It's the capacity to adjust your approach, rethink assumptions and move with change rather than resist it. Leaders with strong change agility create momentum during uncertainty. They help teams stay focused, reduce anxiety and turn disruption into progress.",
+        "When change agility falters, leaders cling to old patterns, react defensively or become overwhelmed by shifting priorities. Teams feel the tension immediately. Resistance grows, communication breaks down and people start protecting the status quo instead of exploring new possibilities. Over time, this slows innovation, weakens resilience and makes every change feel heavier than it needs to."
+      ],
+      "supports_heading": "How Leadra supports Change Agility",
+      "supports_body": "Leadra builds change agility by helping you recognise your reactions to change and choose more adaptive responses. Through simple reflections and behavioural nudges, it encourages you to stay open, adjust your thinking and move forward with clarity rather than resistance. These small shifts compound into a mindset that handles change with steadiness and confidence."
+    },
+    "influence": {
+      "pill": "Influence",
+      "subtitle": "The Capability That Turns Intention Into Impact",
+      "paragraphs": [
+        "Influencing is the ability to move people through clarity, trust and connection, not authority. It's how leaders gain buy-in, shape direction and create alignment without forcing it. Strong influence helps leaders communicate with purpose, build relationships that matter and guide people toward shared outcomes, turning good ideas into real action.",
+        "When influence breaks down, leaders push too hard or not enough. Messages get lost, resistance grows and people disengage. Decisions stall because the leader's intent doesn't translate into collective movement. Over time, this creates friction, slows progress and leaves leaders feeling like they're carrying the weight alone."
+      ],
+      "supports_heading": "How Leadra supports Influencing",
+      "supports_body": "Leadra strengthens influence by helping you understand how your words, actions and presence land with others. Through quick reflections and practical prompts, it encourages you to communicate with more clarity, consider others' perspectives and choose approaches that build trust rather than tension. These small adjustments create influence that feels natural, grounded and effective."
+    }
   }
 }

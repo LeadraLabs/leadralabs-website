@@ -2,11 +2,11 @@
 
 ## What is `content.json`?
 
-`content.json` is a single file in this repository that holds almost all of the words on the Leadra Labs homepage — headlines, buttons, pricing, the footer text, and more.
+`content.json` is a single file in this repository that holds almost all of the words on the Leadra Labs website — homepage headlines and buttons, the About page, the five capability detail pages, pricing, the footer text, and more.
 
-Before this change, changing any wording meant editing raw HTML (`index.html`), which is risky: it's very easy to accidentally break a tag or delete a quote mark and take down the whole page.
+Before this change, changing any wording meant editing raw HTML files, which is risky: it's very easy to accidentally break a tag or delete a quote mark and take down the whole page.
 
-Now, the homepage automatically loads its text from `content.json` when someone visits the site. That means you can change wording by editing **only** `content.json` — you never need to open or touch `index.html`, any CSS, or any JavaScript file again for a copy change.
+Now, the homepage, the About page, and all five capability pages automatically load their text from `content.json` when someone visits the site. That means you can change wording by editing **only** `content.json` — you never need to open or touch any `.html` file, any CSS, or any JavaScript file again for a copy change.
 
 ## Step-by-step: how to edit content.json
 
@@ -21,6 +21,8 @@ Now, the homepage automatically loads its text from `content.json` when someone 
    - `"community"` — the "coming soon" community section
    - `"get_access"` — the "Ready to build your leadership identity?" section
    - `"footer"` — the tagline and copyright line at the bottom
+   - `"about"` — the entire About page: hero copy, the founder bio, the "How we use AI" section, the "Where we're headed" roadmap, and the closing CTA heading
+   - `"capabilities_pages"` — the five capability detail pages (Emotional Regulation, Critical Thinking, Situational Judgement, Change Agility, Influence), each with its own pill label, subtitle, body paragraphs, and "How Leadra supports..." section
 5. Find the piece of text you want to change. It will look like this:
    ```
    "headline": "Leadership is built in moments.",
@@ -52,6 +54,19 @@ into this:
 ```
 — only the words between the quotes changed. Everything else (colon, comma, quote marks) stayed exactly the same.
 
+## Editing a paragraph in a list (About page and capability pages)
+
+Some sections — like the About page's hero copy, the founder bio, and each capability page's body paragraphs — are stored as a **list** of paragraphs rather than a single block of text. It looks like this:
+```
+"hero_paragraphs": [
+  "Leadership is shaped in the moments you cannot plan for. The quiet pause...",
+  "Leadra is a behavioural development app that supports you in those moments...",
+  "Leadership development matters because the demands on leaders are higher than ever...",
+  "Leadra was created in Australia for leaders at every stage of their journey..."
+],
+```
+Each paragraph is its own set of quote marks, separated by commas, inside square brackets `[ ]`. To edit one paragraph, only change the text inside its quote marks — leave the square brackets, the commas between paragraphs, and the number of paragraphs exactly as they are. Adding or removing an entire paragraph (not just editing its wording) is a bigger structural change — ask Kathleen or Claude Code for help with that rather than doing it directly.
+
 ## What happens after you save
 
 Once you commit your change on GitHub, Cloudflare Pages (the service hosting the site) automatically detects the update and rebuilds the live site. This usually takes **1–2 minutes**.
@@ -75,9 +90,9 @@ If this happens:
 
 A few things are deliberately left out of `content.json` and should not be added there:
 
-- **The five capability names and descriptions** (Emotional Regulation, Critical Thinking, Situational Judgement, Change Agility, Influence, and their short descriptions) — this copy has been finalized and is intentionally kept out of the editable file.
+- **The five capability names and one-line descriptions shown on the homepage grid** (e.g. "Stay grounded when pressure spikes" under Emotional Regulation) — this short copy has been finalized and is intentionally kept out of the editable file. Note this is different from the full capability detail pages (`capabilities_pages` in content.json), which **are** editable — those are the pages you reach by clicking a capability card.
 - **Final pricing figures** where marked — some prices are placeholders during the current testing period and will be updated deliberately by the team when ready, rather than through routine content edits.
-- **Page metadata** (the description shown in Google search results and social media link previews) — these live directly in `index.html` because search engines and social platforms can't read `content.json`; changes to these two lines need to be made in the HTML file directly, so ask Kathleen or Claude Code for help if these need updating.
+- **Page metadata** (the description shown in Google search results and social media link previews) — these live directly in each page's own `.html` file (e.g. `index.html`, `about.html`, or a file in `capabilities/`) because search engines and social platforms can't read `content.json`; changes to these lines need to be made in the relevant HTML file directly, so ask Kathleen or Claude Code for help if these need updating.
 - **Links (URLs)** — button and link destinations (where a button takes you when clicked) are not in `content.json`, only the button's visible label text is. Changing a link's destination is a code change, not a content change.
 
 If you're ever unsure whether something belongs in `content.json`, it's always fine to ask.
