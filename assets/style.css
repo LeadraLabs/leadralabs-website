@@ -190,11 +190,11 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 /* ---------- Hero ---------- */
 .hero {
   background: var(--off-white);
-  padding: 64px 0;
+  padding: 28px 0 40px;
 }
 .hero .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 48px;
 }
 .hero-text { flex: 0 0 55%; }
@@ -203,7 +203,7 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 .hero-text h1 {
   font-size: 52px;
   line-height: 1.15;
-  margin: 14px 0 16px;
+  margin: 16px 0 16px;
 }
 
 .hero-text p.sub {
@@ -229,7 +229,7 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 }
 .hero-visual-card .accent-bar { height: 4px; background: var(--gold); }
 .hero-visual-card .placeholder-content {
-  padding: 100px 24px;
+  padding: 64px 24px;
   text-align: center;
   color: rgba(255,255,255,0.5);
   font-size: 14px;
@@ -311,6 +311,8 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 }
 
 /* ---------- How it works ---------- */
+#how-it-works { padding-top: 28px; }
+
 .pillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -334,6 +336,8 @@ nav.nav-links a:hover { color: var(--gold-hover); }
 }
 
 /* ---------- Pricing ---------- */
+#pricing { padding-top: 28px; }
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
