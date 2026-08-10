@@ -25,11 +25,8 @@ content:
           - name: subheadline
             label: Subheadline
             type: text
-          - name: cta_primary
-            label: Primary CTA
-            type: string
           - name: cta_secondary
-            label: Secondary CTA
+            label: CTA
             type: string
 
       - name: capabilities
@@ -67,30 +64,6 @@ content:
               - name: body
                 label: Body
                 type: text
-
-      - name: playbook
-        label: Playbook
-        type: object
-        fields:
-          - name: eyebrow
-            label: Eyebrow
-            type: string
-          - name: headline
-            label: Headline
-            type: string
-          - name: body
-            label: Body
-            type: text
-          - name: modules
-            label: Modules
-            type: string
-            list: true
-          - name: cta
-            label: CTA
-            type: string
-          - name: cta_subtext
-            label: CTA Subtext
-            type: string
 
       - name: pricing
         label: Pricing
@@ -159,9 +132,6 @@ content:
             type: text
           - name: cta_primary
             label: Primary CTA
-            type: string
-          - name: cta_secondary
-            label: Secondary CTA
             type: string
           - name: fine_print
             label: Fine Print

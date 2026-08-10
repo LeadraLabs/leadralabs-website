@@ -2,7 +2,7 @@
 
 ## What is `content.json`?
 
-`content.json` is a single file in this repository that holds almost all of the words on the Leadra Labs homepage — headlines, buttons, pricing, the playbook module list, the footer text, and more.
+`content.json` is a single file in this repository that holds almost all of the words on the Leadra Labs homepage — headlines, buttons, pricing, the footer text, and more.
 
 Before this change, changing any wording meant editing raw HTML (`index.html`), which is risky: it's very easy to accidentally break a tag or delete a quote mark and take down the whole page.
 
@@ -17,7 +17,6 @@ Now, the homepage automatically loads its text from `content.json` when someone 
    - `"nav"` — the top navigation bar
    - `"hero"` — the big headline at the top of the page
    - `"how_it_works"` — the "Grounded in behavioural science" section
-   - `"playbook"` — the playbook section, including the list of modules
    - `"pricing"` — the three pricing cards
    - `"community"` — the "coming soon" community section
    - `"get_access"` — the "Ready to build your leadership identity?" section

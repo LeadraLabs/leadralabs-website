@@ -17,627 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #1A3560;
-    --gold: #E8961E;
-    --gold-hover: #C97D10;
-    --off-white: #F9F8F6;
-    --white: #FFFFFF;
-    --dark-text: #1C1C1C;
-    --muted-text: #5C5C5C;
-    --border: #E2E0DC;
-    --community-bg: #F2F0EB;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--dark-text);
-    background: var(--off-white);
-  }
-
-  img, svg { display: block; max-width: 100%; }
-
-  a { text-decoration: none; color: inherit; }
-
-  ul { list-style: none; }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  section { padding: 96px 0; }
-
-  h1, h2, h3 { font-weight: 600; color: var(--navy); }
-
-  h2.section-heading {
-    font-size: 36px;
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto 16px;
-  }
-
-  p.section-subtext {
-    font-size: 18px;
-    color: var(--muted-text);
-    text-align: center;
-    max-width: 620px;
-    margin: 0 auto 56px;
-  }
-
-  .eyebrow-pill {
-    display: inline-block;
-    background: var(--navy);
-    color: var(--white);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 6px 16px;
-    border-radius: 20px;
-  }
-
-  .eyebrow-gold {
-    display: inline-block;
-    background: rgba(232,150,30,0.12);
-    color: var(--gold-hover);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 20px;
-  }
-
-  .btn {
-    display: inline-block;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  }
-
-  .btn-gold {
-    background: var(--gold);
-    color: var(--white);
-    padding: 14px 28px;
-    border-radius: 24px;
-  }
-  .btn-gold:hover { background: var(--gold-hover); }
-
-  .btn-gold-sm {
-    background: var(--gold);
-    color: var(--white);
-    padding: 10px 22px;
-    border-radius: 24px;
-  }
-  .btn-gold-sm:hover { background: var(--gold-hover); }
-
-  .btn-outline-navy {
-    background: transparent;
-    color: var(--navy);
-    border: 1.5px solid var(--navy);
-    padding: 14px 28px;
-    border-radius: 24px;
-  }
-  .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
-
-  .btn-text-arrow {
-    background: none;
-    color: var(--dark-text);
-    font-weight: 500;
-    padding: 14px 4px;
-  }
-  .btn-text-arrow span { color: var(--gold); margin-left: 6px; transition: margin-left 0.15s ease; }
-  .btn-text-arrow:hover span { margin-left: 10px; }
-
-  /* ---------- Nav ---------- */
-  header.site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--navy);
-    letter-spacing: 0.5px;
-  }
-  .logo .arrow { color: var(--gold); margin: 0 2px; }
-
-  nav.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-  }
-
-  nav.nav-links a {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--dark-text);
-  }
-  nav.nav-links a:hover { color: var(--gold-hover); }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--navy);
-  }
-
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 8px 24px 20px;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    padding: 12px 0;
-    font-size: 15px;
-    font-weight: 500;
-    border-bottom: 1px solid var(--border);
-  }
-  .mobile-menu a:last-child { border-bottom: none; }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    background: var(--off-white);
-    padding: 100px 0;
-  }
-  .hero .container {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-  }
-  .hero-text { flex: 0 0 55%; }
-  .hero-visual { flex: 0 0 40%; margin-left: auto; }
-
-  .hero-text h1 {
-    font-size: 52px;
-    line-height: 1.15;
-    margin: 20px 0 24px;
-  }
-
-  .hero-text p.sub {
-    font-size: 18px;
-    color: var(--muted-text);
-    margin-bottom: 36px;
-    max-width: 520px;
-  }
-
-  .hero-ctas {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .hero-visual-card {
-    max-width: 480px;
-    margin-left: auto;
-    background: var(--navy);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-  .hero-visual-card .accent-bar { height: 4px; background: var(--gold); }
-  .hero-visual-card .placeholder-content {
-    padding: 100px 24px;
-    text-align: center;
-    color: rgba(255,255,255,0.5);
-    font-size: 14px;
-  }
-
-  /* ---------- Capabilities ---------- */
-  .capabilities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-  }
-
-  .capability-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px 20px;
-    transition: border-color 0.15s ease;
-  }
-  .capability-card:hover { border-color: var(--gold); }
-
-  .capability-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(232,150,30,0.12);
-    color: var(--gold-hover);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
-
-  .capability-card h3 {
-    font-size: 16px;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-
-  .capability-card p {
-    font-size: 14px;
-    color: var(--muted-text);
-  }
-
-  /* ---------- How it works ---------- */
-  .pillars {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-  }
-
-  .pillar .num {
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 12px;
-  }
-
-  .pillar h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-
-  .pillar p {
-    color: var(--muted-text);
-  }
-
-  /* ---------- Playbook ---------- */
-  .playbook-section {
-    background: var(--navy);
-    color: var(--white);
-  }
-
-  .playbook-section .container {
-    display: flex;
-    align-items: center;
-    gap: 64px;
-  }
-
-  .playbook-text { flex: 0 0 55%; }
-  .playbook-visual { flex: 0 0 40%; margin-left: auto; }
-
-  .playbook-text .eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 600;
-  }
-
-  .playbook-text h2 {
-    color: var(--white);
-    font-size: 36px;
-    margin: 16px 0 20px;
-  }
-
-  .playbook-text p.body-text {
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 28px;
-    max-width: 480px;
-  }
-
-  .playbook-modules {
-    margin-bottom: 32px;
-  }
-  .playbook-modules li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 12px;
-    color: rgba(255,255,255,0.9);
-    font-size: 15px;
-  }
-  .playbook-modules li span.dot { color: var(--gold); }
-
-  .playbook-note {
-    display: block;
-    margin-top: 14px;
-    font-size: 13px;
-    color: rgba(255,255,255,0.55);
-  }
-
-  .playbook-cover {
-    max-width: 340px;
-    margin-left: auto;
-    background: var(--white);
-    border: 2px solid var(--navy);
-    border-radius: 12px;
-    overflow: hidden;
-    text-align: center;
-  }
-  .playbook-cover .top-bar { height: 8px; background: var(--gold); }
-  .playbook-cover .cover-content { padding: 60px 24px; }
-  .playbook-cover .brand {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--gold-hover);
-    margin-bottom: 24px;
-  }
-  .playbook-cover .title {
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-  .playbook-cover .subtitle {
-    font-size: 16px;
-    color: var(--muted-text);
-    margin-bottom: 24px;
-  }
-  .playbook-cover .arrow-icon {
-    font-size: 20px;
-    color: var(--gold);
-  }
-
-  /* ---------- Pricing ---------- */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    align-items: stretch;
-  }
-
-  .price-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 40px 32px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .price-card.featured {
-    border: 2px solid var(--gold);
-  }
-
-  .popular-badge {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--gold);
-    color: var(--navy);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 20px;
-  }
-
-  .price-card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-
-  .price-card .price {
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 4px;
-  }
-  .price-card .price span {
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--muted-text);
-  }
-
-  .price-card .tagline {
-    font-size: 14px;
-    color: var(--muted-text);
-    margin-bottom: 28px;
-  }
-
-  .price-card ul {
-    margin-bottom: 32px;
-    flex-grow: 1;
-  }
-
-  .price-card ul li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 14.5px;
-    margin-bottom: 14px;
-    color: var(--dark-text);
-  }
-  .price-card ul li span.check { color: var(--gold); font-weight: 600; }
-
-  .price-card .btn { text-align: center; width: 100%; }
-
-  .pricing-footnote {
-    text-align: center;
-    color: var(--muted-text);
-    margin-top: 40px;
-    font-size: 14px;
-  }
-
-  /* ---------- Community ---------- */
-  .community-section {
-    background: var(--community-bg);
-    text-align: center;
-  }
-  .community-inner {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-  .community-inner h2 { font-size: 36px; margin: 20px 0 16px; }
-  .community-inner p { color: var(--muted-text); margin-bottom: 36px; }
-
-  .email-capture {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .email-capture input {
-    font-family: inherit;
-    font-size: 15px;
-    padding: 13px 18px;
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    width: 300px;
-    max-width: 100%;
-    background: var(--white);
-    color: var(--dark-text);
-  }
-  .email-capture input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
-
-  .email-capture button {
-    border-radius: 24px;
-    padding: 13px 26px;
-  }
-
-  /* ---------- Get access ---------- */
-  .get-access {
-    background: var(--off-white);
-    text-align: center;
-  }
-  .get-access h2 { margin-bottom: 16px; }
-  .get-access .section-subtext { margin-bottom: 40px; }
-  .get-access-ctas {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .get-access .fine-print {
-    color: var(--muted-text);
-    font-size: 14px;
-  }
-
-  /* ---------- Footer ---------- */
-  footer {
-    background: var(--navy);
-    color: var(--white);
-    padding: 72px 0 0;
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 48px;
-    padding-bottom: 56px;
-  }
-
-  .footer-logo {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 16px;
-  }
-  .footer-logo .arrow { color: var(--gold); margin: 0 2px; }
-
-  .footer-tagline {
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 20px;
-  }
-
-  .footer-copyright {
-    color: rgba(255,255,255,0.5);
-    font-size: 14px;
-  }
-
-  .footer-heading {
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--gold);
-    margin-bottom: 18px;
-  }
-
-  .footer-heading.second { margin-top: 28px; }
-
-  .footer-links li { margin-bottom: 12px; }
-  .footer-links a { color: rgba(255,255,255,0.85); font-size: 15px; }
-  .footer-links a:hover { color: var(--gold); }
-
-  .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.12);
-    padding: 24px 0;
-    text-align: center;
-    color: rgba(255,255,255,0.5);
-    font-size: 14px;
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 900px) {
-    .pillars { grid-template-columns: 1fr; gap: 40px; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-  }
-
-  @media (max-width: 768px) {
-    section { padding: 64px 0; }
-
-    nav.nav-links { display: none; }
-    .hamburger { display: block; }
-
-    .hero .container { flex-direction: column; }
-    .hero-text { flex: 1; }
-    .hero-visual { flex: 1; margin: 40px 0 0; width: 100%; }
-    .hero-visual-card { margin: 0; max-width: 100%; }
-    .hero-text h1 { font-size: 36px; }
-
-    .playbook-section .container { flex-direction: column; }
-    .playbook-visual { margin: 40px 0 0; width: 100%; }
-    .playbook-cover { margin: 0 auto; }
-
-    h2.section-heading { font-size: 28px; }
-
-    .nav-right { gap: 12px; }
-    .nav-right .btn-gold-sm { display: none; }
-  }
-
-  @media (max-width: 480px) {
-    .hero-ctas { flex-direction: column; align-items: flex-start; }
-    .get-access-ctas { flex-direction: column; align-items: stretch; }
-    .get-access-ctas .btn { text-align: center; }
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -648,7 +28,6 @@
     <nav class="nav-links">
       <a href="about.html">About</a>
       <a href="#how-it-works">How it works</a>
-      <a href="#playbook">The playbook</a>
       <a href="#pricing">Pricing</a>
       <a href="#community">Community</a>
     </nav>
@@ -660,7 +39,6 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="about.html">About</a>
     <a href="#how-it-works">How it works</a>
-    <a href="#playbook">The playbook</a>
     <a href="#pricing">Pricing</a>
     <a href="#community">Community</a>
   </div>
@@ -677,8 +55,7 @@
       <!-- NOVA: edit copy here -->
       <p class="sub" data-content="hero.subheadline">Leadra is a behavioural development app for emerging leaders. It helps you recognise the pressure spikes, difficult conversations, and unexpected changes — and build the capabilities to navigate them with confidence.</p>
       <div class="hero-ctas">
-        <a href="#" class="btn btn-gold" data-content="hero.cta_primary"><!-- TODO: replace with real link -->Download the playbook</a>
-        <a href="#how-it-works" class="btn btn-text-arrow" data-content="hero.cta_secondary">Learn how it works<span>→</span></a>
+        <a href="#how-it-works" class="btn btn-gold" data-content="hero.cta_secondary">Learn how it works</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -699,31 +76,36 @@
     <!-- NOVA: edit copy here -->
     <p class="section-subtext" data-content="capabilities.subtext">Each capability is taught through micro-moments, short practice tasks, and immediate reflection loops — ensuring learning is contextual, frequent, and measurable.</p>
     <div class="capabilities-grid">
-      <div class="capability-card">
+      <a class="capability-card" href="capabilities/emotional-regulation.html">
+        <span class="card-arrow">→</span>
         <div class="capability-icon">ER</div>
         <h3>Emotional Regulation</h3>
         <p>Stay grounded when pressure spikes</p>
-      </div>
-      <div class="capability-card">
+      </a>
+      <a class="capability-card" href="capabilities/critical-thinking.html">
+        <span class="card-arrow">→</span>
         <div class="capability-icon">CT</div>
         <h3>Critical Thinking</h3>
         <p>Cut through noise and make sharper decisions</p>
-      </div>
-      <div class="capability-card">
+      </a>
+      <a class="capability-card" href="capabilities/situational-judgement.html">
+        <span class="card-arrow">→</span>
         <div class="capability-icon">SJ</div>
         <h3>Situational Judgement</h3>
         <p>Read the moment and respond with intention</p>
-      </div>
-      <div class="capability-card">
+      </a>
+      <a class="capability-card" href="capabilities/change-agility.html">
+        <span class="card-arrow">→</span>
         <div class="capability-icon">CA</div>
         <h3>Change Agility</h3>
         <p>Stay steady and effective when things shift</p>
-      </div>
-      <div class="capability-card">
+      </a>
+      <a class="capability-card" href="capabilities/influence.html">
+        <span class="card-arrow">→</span>
         <div class="capability-icon">IN</div>
         <h3>Influence</h3>
         <p>Move people without relying on authority</p>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -761,40 +143,7 @@
   </div>
 </section>
 
-<!-- ============ PLAYBOOK ============ -->
-<section id="playbook" class="playbook-section">
-  <div class="container">
-    <div class="playbook-text">
-      <!-- NOVA: edit copy here -->
-      <span class="eyebrow" data-content="playbook.eyebrow">Free resource</span>
-      <!-- NOVA: edit copy here -->
-      <h2 data-content="playbook.headline">Start with the Emerging Leaders Playbook.</h2>
-      <!-- NOVA: edit copy here -->
-      <p class="body-text" data-content="playbook.body">A self-directed workbook covering five core leadership capabilities — with 7-day practice plans, reflection exercises, and in-the-moment scripts. Use it alongside the Leadra app or as a standalone resource.</p>
-      <ul class="playbook-modules" data-content-list="playbook.modules">
-        <!-- NOVA: edit copy here -->
-        <li><span class="dot">•</span> <span data-field="text">Module 1: Emotional Regulation — 7-day practice</span></li>
-        <li><span class="dot">•</span> <span data-field="text">Module 2: Critical Thinking — decision filters and probes</span></li>
-        <li><span class="dot">•</span> <span data-field="text">Module 3: Situational Judgement — reading the moment</span></li>
-        <li><span class="dot">•</span> <span data-field="text">Module 4: Change Agility — staying steady through uncertainty</span></li>
-        <li><span class="dot">•</span> <span data-field="text">Module 5: Influence — coming soon</span></li>
-      </ul>
-      <a href="emerging-leaders-playbook.pdf" class="btn btn-gold" style="color:var(--navy);" data-content="playbook.cta">Download free playbook</a>
-      <span class="playbook-note" data-content="playbook.cta_subtext">No sign-up required · PDF · Free</span>
-    </div>
-    <div class="playbook-visual">
-      <div class="playbook-cover">
-        <div class="top-bar"></div>
-        <div class="cover-content">
-          <div class="brand">LEADRA LABS</div>
-          <div class="title">Emerging Leaders</div>
-          <div class="subtitle">Playbook</div>
-          <div class="arrow-icon">↑</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Playbook section removed 2026-08-10 — may return later -->
 
 <!-- ============ PRICING ============ -->
 <section id="pricing">
@@ -886,10 +235,9 @@
     <!-- NOVA: edit copy here -->
     <h2 class="section-heading" data-content="get_access.heading">Ready to build your leadership identity?</h2>
     <!-- NOVA: edit copy here -->
-    <p class="section-subtext" data-content="get_access.subtext">Leadra is available now as a web app. A Telegram mini app is coming soon. Start with the free playbook, or jump straight into the app.</p>
+    <p class="section-subtext" data-content="get_access.subtext">Leadra is available now as a web app. A Telegram mini app is coming soon.</p>
     <div class="get-access-ctas">
       <a href="#" class="btn btn-gold" data-content="get_access.cta_primary"><!-- TODO: replace with real link -->Access the web app</a>
-      <a href="emerging-leaders-playbook.pdf" class="btn btn-outline-navy" data-content="get_access.cta_secondary">Download the playbook</a>
     </div>
     <p class="fine-print" data-content="get_access.fine_print">Telegram mini app · Coming soon</p>
   </div>
@@ -909,7 +257,6 @@
         <div class="footer-heading">Product</div>
         <ul class="footer-links">
           <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#playbook">The playbook</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#community">Community</a></li>
         </ul>
