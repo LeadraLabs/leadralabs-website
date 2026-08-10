@@ -538,7 +538,7 @@ footer {
 .page-header {
   background: var(--off-white);
   text-align: center;
-  padding: 20px 0 16px;
+  padding: 12px 0 8px;
 }
 .page-header h1 {
   font-size: 44px;
@@ -546,7 +546,7 @@ footer {
   margin-top: 24px;
 }
 
-#what-is-leadra { padding-top: 24px; }
+#what-is-leadra { padding-top: 12px; }
 
 /* ---------- About page: prose ---------- */
 .prose {
