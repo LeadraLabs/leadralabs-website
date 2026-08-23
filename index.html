@@ -4,19 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leadra Labs: Leadership is built in moments</title>
-<!-- NOVA: these meta tags are intentionally left as plain HTML (not in content.json). Search engines and
-     social media crawlers read this page without running JavaScript, so text loaded dynamically from
-     content.json would not show up in Google results or link previews. Edit these two lines directly here. -->
-<meta name="description" content="Leadra is a behavioural development app for emerging leaders. Recognise pressure spikes, difficult conversations, and change — and build the capability to navigate them with confidence.">
+<meta name="description" content="Leadra is a behavioural development app for leaders at every stage. Recognise pressure spikes, difficult conversations, and change — and build the capability to navigate them with confidence.">
 <meta property="og:title" content="Leadra Labs: Leadership is built in moments">
-<meta property="og:description" content="A behavioural development app for emerging leaders, built for the moments that matter.">
+<meta property="og:description" content="A behavioural development app for leaders at every stage, built for the moments that matter.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leadralabs.com">
 <meta property="og:image" content="https://leadralabs.com/og-image.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A3560'/%3E%3Ctext x='32' y='46' font-family='Arial, sans-serif' font-size='38' font-weight='700' fill='%23E8961E' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -24,21 +21,26 @@
 <!-- ============ NAVIGATION ============ -->
 <header class="site-nav">
   <div class="nav-inner">
-    <a href="#" class="logo">LEADRA<span class="arrow">›</span>LABS</a>
+    <a href="#" class="logo logo-mark">
+      <img src="assets/logo.png" class="logo-icon" alt="Leadra Labs logo">
+      LEADRA<span class="arrow">›</span>LABS
+    </a>
     <nav class="nav-links">
       <a href="about.html">About</a>
-      <a href="#how-it-works">How it works</a>
+      <a href="#how-it-works">How Leadra works</a>
+      <a href="#for-organisations">For organisations</a>
       <a href="#pricing">Pricing</a>
       <a href="#community">Community</a>
     </nav>
     <div class="nav-right">
-      <a href="#" class="btn btn-gold-sm" data-content="nav.cta_button"><!-- TODO: replace with real link -->Get early access</a>
+      <a href="#" class="btn btn-gold-sm"><!-- TODO: replace with real link --> Get early access</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="about.html">About</a>
-    <a href="#how-it-works">How it works</a>
+    <a href="#how-it-works">How Leadra works</a>
+    <a href="#for-organisations">For organisations</a>
     <a href="#pricing">Pricing</a>
     <a href="#community">Community</a>
   </div>
@@ -48,21 +50,38 @@
 <section class="hero">
   <div class="container">
     <div class="hero-text">
-      <!-- NOVA: edit copy here -->
-      <span class="eyebrow-pill" data-content="hero.eyebrow">Emerging leaders · Built for the moments that matter</span>
-      <!-- NOVA: edit copy here -->
-      <h1 data-content="hero.headline">Leadership is built in moments.</h1>
-      <!-- NOVA: edit copy here -->
-      <p class="sub" data-content="hero.subheadline">Leadra is a behavioural development app for emerging leaders. It helps you recognise the pressure spikes, difficult conversations, and unexpected changes — and build the capabilities to navigate them with confidence.</p>
+      <span class="eyebrow-pill">Practical support for leaders at every career stage</span>
+      <h1>Leadership is built in moments.</h1>
+      <p class="sub">Leadership is shaped in the moments that matter. The tough conversation with a team member. The challenge of influencing someone outside your reporting line. The pressure of managing upwards when expectations shift. The need to see a problem from a completely different angle.</p>
+      <p class="sub">These moments define how people experience you, yet most leaders face them without support. Leadra helps you meet these situations with clarity and intention, giving you practical behavioural insight right when you need it. Whether you're leading for the first time or the hundredth, Leadra meets you at your stage and adapts as you grow.</p>
       <div class="hero-ctas">
-        <a href="#how-it-works" class="btn btn-gold" data-content="hero.cta_secondary">Learn how it works</a>
+        <a href="#how-it-works" class="btn btn-gold">Learn how it works</a>
       </div>
     </div>
     <div class="hero-visual">
-      <!-- TODO: replace with actual app screenshot -->
-      <div class="hero-visual-card">
-        <div class="accent-bar"></div>
-        <div class="placeholder-content">[ App preview — to be added ]</div>
+      <div class="moment-log-card">
+        <div class="moment-log-label">LIVE MOMENT LOG</div>
+        <div class="moment-log-item">
+          <div>
+            <div class="moment-log-item-title">Pressure spike detected</div>
+            <div class="moment-log-item-meta">Mid-meeting · 9:41am</div>
+          </div>
+          <div class="moment-log-tag">ER</div>
+        </div>
+        <div class="moment-log-item">
+          <div>
+            <div class="moment-log-item-title">2-minute reset practice</div>
+            <div class="moment-log-item-meta">Suggested · in progress</div>
+          </div>
+          <div class="moment-log-tag">ER</div>
+        </div>
+        <div class="moment-log-item">
+          <div>
+            <div class="moment-log-item-title">Reflection logged</div>
+            <div class="moment-log-item-meta">Pattern updated</div>
+          </div>
+          <div class="moment-log-tag done">✓</div>
+        </div>
       </div>
     </div>
   </div>
@@ -71,145 +90,162 @@
 <!-- ============ CAPABILITIES ============ -->
 <section id="capabilities">
   <div class="container">
-    <!-- NOVA: edit copy here -->
-    <h2 class="section-heading" data-content="capabilities.heading">Five capabilities. One leadership identity.</h2>
-    <!-- NOVA: edit copy here -->
-    <p class="section-subtext" data-content="capabilities.subtext">Each capability is taught through micro-moments, short practice tasks, and immediate reflection loops — ensuring learning is contextual, frequent, and measurable.</p>
+    <h2 class="section-heading">Five capabilities. One leadership identity.</h2>
+    <p class="section-subtext">Leadra focuses on five capabilities because leaders already deal with enough complexity. These five areas show up in almost every real situation, whether you're a first-time manager or leading at the executive level, and whether you are guiding a team through a sudden change or trying to rebuild trust after something has gone wrong. By keeping the focus tight, Leadra helps leaders strengthen the behaviours that genuinely make a difference, wherever they're starting from.<br><br>Each capability is strengthened through small, personalised micro-moments shaped by your own lived experience, helping you grow in ways that feel natural and immediately useful.</p>
     <div class="capabilities-grid">
-      <a class="capability-card" href="capabilities/emotional-regulation.html">
-        <span class="card-arrow">→</span>
-        <div class="capability-icon">ER</div>
+      <button class="capability-card" data-modal="modal-er" type="button">
+        <img class="capability-icon-img" src="assets/icons/emotional-regulation.png" alt="Emotional Regulation icon">
         <h3>Emotional Regulation</h3>
         <p>Stay grounded when pressure spikes</p>
-      </a>
-      <a class="capability-card" href="capabilities/critical-thinking.html">
-        <span class="card-arrow">→</span>
-        <div class="capability-icon">CT</div>
+      </button>
+      <button class="capability-card" data-modal="modal-ct" type="button">
+        <img class="capability-icon-img" src="assets/icons/critical-thinking.png" alt="Critical Thinking icon">
         <h3>Critical Thinking</h3>
         <p>Cut through noise and make sharper decisions</p>
-      </a>
-      <a class="capability-card" href="capabilities/situational-judgement.html">
-        <span class="card-arrow">→</span>
-        <div class="capability-icon">SJ</div>
+      </button>
+      <button class="capability-card" data-modal="modal-sj" type="button">
+        <img class="capability-icon-img" src="assets/icons/situational-judgement.png" alt="Situational Judgement icon">
         <h3>Situational Judgement</h3>
-        <p>Read the moment and respond with intention</p>
-      </a>
-      <a class="capability-card" href="capabilities/change-agility.html">
-        <span class="card-arrow">→</span>
-        <div class="capability-icon">CA</div>
+        <p>Read the room and act with intention</p>
+      </button>
+      <button class="capability-card" data-modal="modal-ca" type="button">
+        <img class="capability-icon-img" src="assets/icons/change-agility.png" alt="Change Agility icon">
         <h3>Change Agility</h3>
         <p>Stay steady and effective when things shift</p>
-      </a>
-      <a class="capability-card" href="capabilities/influence.html">
-        <span class="card-arrow">→</span>
-        <div class="capability-icon">IN</div>
+      </button>
+      <button class="capability-card" data-modal="modal-in" type="button">
+        <img class="capability-icon-img" src="assets/icons/influence.png" alt="Influence icon">
         <h3>Influence</h3>
         <p>Move people without relying on authority</p>
-      </a>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS ============ -->
+<!-- ============ HOW LEADRA WORKS (4-step loop) ============ -->
 <section id="how-it-works">
   <div class="container">
-    <!-- NOVA: edit copy here -->
-    <h2 class="section-heading" data-content="how_it_works.heading">Grounded in behavioural science.</h2>
-    <!-- NOVA: edit copy here -->
-    <p class="section-subtext" data-content="how_it_works.subtext">Leadra translates evidence-based principles from leadership development, organisational behaviour, and coaching into a practical, in-the-moment learning system.</p>
-    <div class="pillars" data-content-list="how_it_works.pillars">
-      <div class="pillar">
-        <div class="num" data-field="number">01</div>
-        <!-- NOVA: edit copy here -->
-        <h3 data-field="heading">Deliberate practice</h3>
-        <!-- NOVA: edit copy here -->
-        <p data-field="body">Learning applied to real workplace tasks, with repeated and spaced practice, produces higher impact and better retention.</p>
+    <h2 class="section-heading" style="margin:0 0 6px">How Leadra works.</h2>
+    <p class="section-subtext" style="margin:0 0 32px">A simple daily loop that gets smarter about you over time.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Tell Leadra your focus</h3>
+        <p>Share what you're wanting to develop, where you're at in your career, and what you're working towards. Leadra adapts to your stage, whether you're new to leading or years in.</p>
       </div>
-      <div class="pillar">
-        <div class="num" data-field="number">02</div>
-        <!-- NOVA: edit copy here -->
-        <h3 data-field="heading">Behavioural principles</h3>
-        <!-- NOVA: edit copy here -->
-        <p data-field="body">Small, observable behaviours shaped by clear prompts and timely feedback produce measurable changes in how you lead.</p>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Journal daily</h3>
+        <p>Reflect on your day and track the physiological factors, like sleep, nutrition, stress, and exercise, that contribute towards how you show up as a leader.</p>
       </div>
-      <div class="pillar">
-        <div class="num" data-field="number">03</div>
-        <!-- NOVA: edit copy here -->
-        <h3 data-field="heading">Personalised feedback</h3>
-        <!-- NOVA: edit copy here -->
-        <p data-field="body">Combining micro-coaching with automated nudges increases self-efficacy and translates insight into real-world action.</p>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Get insights &amp; micro-actions</h3>
+        <p>Leadra weighs all these factors together and gives you specific insights and micro-actions to build on the next day.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>Track your progress</h3>
+        <p>Weekly and monthly summaries roll up into a dashboard so you can see your growth over time.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Playbook section removed 2026-08-10 — may return later -->
+<!-- ============ GROUNDED IN BEHAVIOURAL SCIENCE ============ -->
+<section class="science-section">
+  <div class="container">
+    <h2 class="section-heading">Grounded in behavioural science.</h2>
+    <p class="section-subtext">Research shows leaders grow most through real experiences, not long workshops or heavy theory. Leadra uses micro-behaviour design and contextual learning to help you build capability in the moments leadership actually happens. Change sticks because it grows from your day, not from concepts you have to recall later.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="num">01</div>
+        <h3>Deliberate practice</h3>
+        <p>Learning applied to real workplace tasks, with repeated and spaced practice, produces higher impact and better retention.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <h3>Behavioural principles</h3>
+        <p>Small, observable behaviours shaped by clear prompts and timely feedback produce measurable changes in how you lead.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <h3>Personalised feedback</h3>
+        <p>Combining micro-coaching with automated nudges increases self-efficacy and translates insight into real-world action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRING LEADRA TO YOUR ORGANISATION ============ -->
+<section id="for-organisations" class="org-section">
+  <div class="container">
+    <span class="eyebrow-navy">Leadra for organisations</span>
+    <h2 class="org-heading">Bring Leadra to your organisation.</h2>
+    <p class="org-subheading">Leadership development, built around the culture you're building.</p>
+    <div class="org-divider"></div>
+    <p class="org-body">Every organisation needs something different from its leaders. Leadra's five capabilities flex to match the behaviours your culture demands, so development reinforces the direction you're actually taking the business, not a generic leadership curriculum.</p>
+    <div class="org-grid">
+      <div class="org-card">
+        <div class="org-card-num">01</div>
+        <h3>Tailored to your culture</h3>
+        <p>Weight the five capabilities to the behaviours that matter most for where you're headed, whether that's change readiness, influence without authority, or sharper decision-making under pressure.</p>
+      </div>
+      <div class="org-card dark">
+        <div class="org-card-num">02</div>
+        <h3>Team-level insight, individually anonymous</h3>
+        <p>See the progress your leaders are making as a team, never as individuals. Aggregated, anonymised insight gives you the signal without compromising anyone's trust.</p>
+      </div>
+      <div class="org-card">
+        <div class="org-card-num">03</div>
+        <h3>A dashboard that points forward</h3>
+        <p>Track focus areas across your leadership population and surface where future development will make the biggest difference, before the gaps show up in performance.</p>
+      </div>
+    </div>
+    <div class="org-cta">
+      <button class="btn btn-gold" data-modal="modal-contact" type="button">Talk to us about your team</button>
+    </div>
+  </div>
+</section>
 
 <!-- ============ PRICING ============ -->
 <section id="pricing">
   <div class="container">
-    <!-- NOVA: edit copy here -->
-    <h2 class="section-heading" data-content="pricing.heading">Choose how you grow.</h2>
-    <!-- NOVA: edit copy here -->
-    <p class="section-subtext" data-content="pricing.subtext">Start free. Move to a plan when you're ready. No lock-in.</p>
-    <div class="pricing-grid" data-content-list="pricing.tiers">
+    <h2 class="section-heading">Choose how you grow.</h2>
+    <p class="section-subtext">Start weekly, or save with annual. No lock-in.</p>
+    <div class="pricing-grid">
 
       <div class="price-card">
-        <h3 data-field="name">Essentials</h3>
-        <!-- NOVA: edit copy here -->
-        <div class="price"><span data-field="price">$0.00</span> <span data-field="price_period">/month</span></div>
-        <!-- NOVA: edit copy here -->
-        <p class="tagline" data-field="tagline">For individuals getting started</p>
-        <ul data-field-list="features">
-          <li><span class="check">✓</span> <span data-field="text">Access to all 5 capability modules</span></li>
-          <li><span class="check">✓</span> <span data-field="text">7-day practice plans</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Daily journaling and reflection</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Basic pattern insights</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Playbook download included</span></li>
+        <h3>Weekly</h3>
+        <div class="price"><span>$5</span> <span>/week</span></div>
+        <p class="tagline">Introductory offer, usually $10/week</p>
+        <hr class="price-divider">
+        <ul>
+          <li><span class="check">✓</span> <span>Access to all 5 capability modules</span></li>
+          <li><span class="check">✓</span> <span>Daily journaling and reflection</span></li>
+          <li><span class="check">✓</span> <span>Personalised insights and micro-actions</span></li>
+          <li><span class="check">✓</span> <span>Weekly and monthly progress dashboard</span></li>
         </ul>
-        <a href="#" class="btn btn-outline-navy" data-field="cta"><!-- TODO: replace with real link -->Get started</a>
+        <a href="#" class="btn btn-outline-navy"><!-- TODO: replace with real link -->Get started</a>
       </div>
 
-      <div class="price-card featured">
-        <span class="popular-badge">Most popular</span>
-        <h3 data-field="name">Professional</h3>
-        <!-- NOVA: edit copy here -->
-        <div class="price"><span data-field="price">$0.00</span> <span data-field="price_period">/month</span></div>
-        <!-- NOVA: edit copy here -->
-        <p class="tagline" data-field="tagline">For emerging leaders building real habits</p>
-        <ul data-field-list="features">
-          <li><span class="check">✓</span> <span data-field="text">Everything in Essentials</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Personalised weekly summaries</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Micromoment tracking</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Behavioural pattern detection</span></li>
-          <li><span class="check">✓</span> <span data-field="text">In-the-moment coaching nudges</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Priority access to new modules</span></li>
+      <div class="price-card dark">
+        <span class="popular-badge">Best value</span>
+        <h3>Annual</h3>
+        <div class="price"><span>$200</span> <span>/year</span></div>
+        <p class="tagline">Introductory offer, usually $350/year</p>
+        <hr class="price-divider">
+        <ul>
+          <li><span class="check">✓</span> <span>Everything in Weekly</span></li>
+          <li><span class="check">✓</span> <span>Save over 40% versus paying weekly</span></li>
+          <li><span class="check">✓</span> <span>Priority access to new modules</span></li>
+          <li><span class="check">✓</span> <span>Locked-in annual rate</span></li>
         </ul>
-        <a href="#" class="btn btn-gold" data-field="cta"><!-- TODO: replace with real link -->Get started</a>
-      </div>
-
-      <div class="price-card">
-        <h3 data-field="name">Enhanced</h3>
-        <!-- NOVA: edit copy here -->
-        <div class="price"><span data-field="price">$XX</span> <span data-field="price_period">/month</span></div>
-        <!-- NOVA: edit copy here -->
-        <p class="tagline" data-field="tagline">For teams and organisations</p>
-        <ul data-field-list="features">
-          <li><span class="check">✓</span> <span data-field="text">Everything in Professional</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Team dashboard (coming soon)</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Cohort-based learning paths</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Coach or manager visibility</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Custom capability focus</span></li>
-          <li><span class="check">✓</span> <span data-field="text">Dedicated onboarding support</span></li>
-        </ul>
-        <a href="#" class="btn btn-outline-navy" data-field="cta"><!-- TODO: replace with real link -->Talk to us</a>
+        <a href="#" class="btn btn-gold"><!-- TODO: replace with real link -->Get started</a>
       </div>
 
     </div>
-    <!-- NOVA: edit copy here -->
-    <p class="pricing-footnote" data-content="pricing.footnote_trial">All plans include a 14-day free trial. Cancel any time.</p>
-    <!-- NOVA: edit copy here -->
-    <p class="pricing-footnote" data-content="pricing.footnote_testing">Essentials and Professional are free while we're in testing — pricing will be introduced before general launch.</p>
+    <p class="pricing-footnote">Both plans include a free 7-day trial. Subscriptions automatically renew until cancelled. Introductory pricing available for a limited time.</p>
   </div>
 </section>
 
@@ -217,65 +253,144 @@
 <section id="community" class="community-section">
   <div class="community-inner">
     <span class="eyebrow-gold">Coming soon</span>
-    <!-- NOVA: edit copy here -->
-    <h2 data-content="community.heading">A community of leaders who reflect, not just react.</h2>
-    <!-- NOVA: edit copy here -->
-    <p data-content="community.body">The Leadra community is being built. A space for emerging leaders to share moments, compare patterns, and support each other's growth. Get early access when we launch.</p>
+    <h2>A community of leaders who reflect, not just react.</h2>
+    <p>The Leadra community is being built, a space to connect with other leaders on the same journey. Tell us what you'd be interested in, and we'll be in touch as each one takes shape.</p>
+    <div class="community-tags">
+      <span class="community-tag">Community forums</span>
+      <span class="community-tag">Mentoring</span>
+      <span class="community-tag">Webinars &amp; leadership insight sessions</span>
+    </div>
     <!-- TODO: wire up to email capture (e.g. Mailchimp, ConvertKit) -->
     <form class="email-capture" onsubmit="return false;">
       <input type="email" placeholder="your@email.com" aria-label="Email address" required>
-      <button type="submit" class="btn btn-gold-sm" data-content="community.form_button">Notify me</button>
+      <button type="submit" class="btn btn-gold-sm">Notify me</button>
     </form>
-  </div>
-</section>
-
-<!-- ============ GET ACCESS ============ -->
-<section class="get-access">
-  <div class="container">
-    <!-- NOVA: edit copy here -->
-    <h2 class="section-heading" data-content="get_access.heading">Ready to build your leadership identity?</h2>
-    <!-- NOVA: edit copy here -->
-    <p class="section-subtext" data-content="get_access.subtext">Leadra is available now as a web app. A Telegram mini app is coming soon.</p>
-    <div class="get-access-ctas">
-      <a href="#" class="btn btn-gold" data-content="get_access.cta_primary"><!-- TODO: replace with real link -->Access the web app</a>
-    </div>
-    <p class="fine-print" data-content="get_access.fine_print">Telegram mini app · Coming soon</p>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-grid" style="grid-template-columns: 1.4fr 1fr;">
       <div>
         <div class="footer-logo">LEADRA<span class="arrow">›</span>LABS</div>
-        <!-- NOVA: edit copy here -->
-        <p class="footer-tagline" data-content="footer.tagline">Leadership is built in moments.</p>
-        <p class="footer-copyright" data-content="footer.copyright">© 2026 Leadra Labs. All rights reserved.</p>
-      </div>
-      <div>
-        <div class="footer-heading">Product</div>
-        <ul class="footer-links">
-          <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#community">Community</a></li>
-        </ul>
+        <p class="footer-tagline">Leadership is built in moments.</p>
+        <p class="footer-tagline" style="margin-top:-4px"><a href="mailto:hello@leadralabs.com" style="color:inherit">hello@leadralabs.com</a></p>
+        <p class="footer-copyright">© 2026 Leadra Labs. All rights reserved.</p>
       </div>
       <div>
         <div class="footer-heading">Legal</div>
         <ul class="footer-links">
-          <li><a href="#"><!-- TODO: replace with real link -->Privacy policy</a></li>
-          <li><a href="#"><!-- TODO: replace with real link -->Terms of use</a></li>
-        </ul>
-        <div class="footer-heading second">Contact</div>
-        <ul class="footer-links">
-          <li><a href="mailto:hello@leadralabs.com">hello@leadralabs.com</a></li>
+          <li><a href="Leadra Privacy Policy 20Aug26.pdf" target="_blank" rel="noopener">Privacy policy</a></li>
+          <li><a href="Leadra Terms of Use 17Aug26.pdf" target="_blank" rel="noopener">Terms of use</a></li>
+          <li><a href="Leadra User Safety Statement 17Aug26.pdf" target="_blank" rel="noopener">User safety statement</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">Built in Australia 🇦🇺</div>
   </div>
 </footer>
+
+<!-- ============ CAPABILITY DETAIL MODALS ============ -->
+<div class="modal-overlay" id="modal-er">
+  <div class="modal-box">
+    <div class="modal-header">
+      <img class="modal-icon" src="assets/icons/emotional-regulation.png" alt="Emotional Regulation icon">
+      <h2>Emotional Regulation</h2>
+    </div>
+    <p>When emotions run high, leadership can feel harder than it should. You might notice yourself reacting too quickly, feeling thrown off in a conversation or struggling to stay calm when pressure builds. Your team feels it too. Tension rises, people pull back, and small issues start to grow because the focus shifts from the work to the emotion in the room.</p>
+    <p>Emotional regulation helps you stay steady, think clearly and create the kind of environment where people feel safe to bring their best thinking.</p>
+    <h3>How Leadra helps</h3>
+    <p>Leadra strengthens emotional regulation through small, personalised micro moments that reflect your real experiences. These moments help you notice what is happening, understand the trigger and choose a calmer response that keeps the conversation and the team on track. Over time, you build a steadier way of leading that people feel immediately.</p>
+    <div class="modal-close-row"><button class="modal-close-btn" type="button">Close</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-ct">
+  <div class="modal-box">
+    <div class="modal-header">
+      <img class="modal-icon" src="assets/icons/critical-thinking.png" alt="Critical Thinking icon">
+      <h2>Critical Thinking</h2>
+    </div>
+    <p>When pressure is high, it is easy to rush into a solution or get stuck on the first idea that seems workable. You might feel mentally cluttered, unsure where to start or overwhelmed by competing priorities. When critical thinking slips, problems get oversimplified, risks are missed and teams end up solving the wrong issue.</p>
+    <p>Critical thinking helps you slow the moment down, see the problem clearly and make choices that stand up under pressure.</p>
+    <h3>How Leadra helps</h3>
+    <p>Leadra helps you strengthen critical thinking by prompting you to pause, step back and explore the problem from different angles. You learn to question assumptions, separate noise from what matters and make decisions with more clarity. Over time, your thinking becomes more deliberate and grounded.</p>
+    <div class="modal-close-row"><button class="modal-close-btn" type="button">Close</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-sj">
+  <div class="modal-box">
+    <div class="modal-header">
+      <img class="modal-icon" src="assets/icons/situational-judgement.png" alt="Situational Judgement icon">
+      <h2>Situational Judgement</h2>
+    </div>
+    <p>When a moment feels unclear, it is easy to second-guess yourself or jump to a response that misses what the situation actually needs. You might feel unsure about how to move the conversation forward or notice the team looking for direction you are not quite ready to give. When situational judgement slips, decisions stall, misunderstandings grow and people start filling the gaps with their own assumptions.</p>
+    <p>Situational judgement helps you read what is happening and choose the action that keeps things moving in the right direction.</p>
+    <h3>How Leadra helps</h3>
+    <p>Leadra helps you sharpen situational awareness by prompting you to reflect on real moments you face. You learn to spot cues you may have missed, understand what is driving the situation and choose a response that supports clarity and progress. Over time, your judgement becomes more confident and consistent.</p>
+    <div class="modal-close-row"><button class="modal-close-btn" type="button">Close</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-ca">
+  <div class="modal-box">
+    <div class="modal-header">
+      <img class="modal-icon" src="assets/icons/change-agility.png" alt="Change Agility icon">
+      <h2>Change Agility</h2>
+    </div>
+    <p>Change can feel unsettling, especially when expectations shift quickly or the path ahead is unclear. You might notice yourself resisting, feeling thrown off or struggling to help your team stay focused. When change agility slips, momentum drops, frustration rises and people start clinging to old ways of working.</p>
+    <p>Change agility helps you adapt with confidence and guide others through uncertainty.</p>
+    <h3>How Leadra helps</h3>
+    <p>Leadra helps you build change agility by encouraging you to reflect on your reactions and the impact they have on others. You learn to reset your mindset, stay open to new information and respond in a way that keeps your team steady and moving forward. Over time, you become a more flexible and reassuring presence during change.</p>
+    <div class="modal-close-row"><button class="modal-close-btn" type="button">Close</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-in">
+  <div class="modal-box">
+    <div class="modal-header">
+      <img class="modal-icon" src="assets/icons/influence.png" alt="Influence icon">
+      <h2>Influence</h2>
+    </div>
+    <p>Influence can feel challenging when you need support from someone who sees things differently or when you are trying to shift a conversation that is stuck. You might feel unheard, frustrated or unsure how to get traction. When influence is off, progress slows, relationships strain and people start protecting their own position instead of working together.</p>
+    <p>Influence helps you connect with others in a way that builds trust, alignment and shared commitment.</p>
+    <h3>How Leadra helps</h3>
+    <p>Leadra helps you strengthen influence by guiding you to reflect on how you communicate, what others may be experiencing and how your approach lands. You learn to adjust your style, find common ground and create conversations that open rather than close. Over time, your influence feels more natural and effective.</p>
+    <div class="modal-close-row"><button class="modal-close-btn" type="button">Close</button></div>
+  </div>
+</div>
+
+<!-- ============ ORGANISATION CONTACT MODAL ============ -->
+<div class="modal-overlay contact-modal" id="modal-contact">
+  <div class="modal-box">
+    <h2>Talk to us about your team</h2>
+    <p class="modal-intro">Tell us a bit about what you're after and we'll be in touch.</p>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="contactName">Your name</label>
+        <input type="text" id="contactName" name="contactName">
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Your email address</label>
+        <input type="email" id="contactEmail" name="contactEmail">
+      </div>
+      <div class="form-group">
+        <label for="contactPhone">Your phone number</label>
+        <input type="tel" id="contactPhone" name="contactPhone">
+      </div>
+      <div class="form-group">
+        <label for="contactReason">Reason for enquiry</label>
+        <textarea id="contactReason" name="contactReason" rows="4"></textarea>
+      </div>
+      <div class="modal-actions">
+        <button class="modal-btn-cancel" type="button" data-close-contact>Cancel</button>
+        <button class="modal-btn-send" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <script>
   document.getElementById('hamburgerBtn').addEventListener('click', function () {
@@ -290,94 +405,68 @@
 </script>
 
 <!--
-  Loads homepage copy from content.json and populates it into the page.
-  If content.json is missing, unreachable, or malformed, this silently does nothing
-  and the hardcoded text already in the HTML above is shown instead (fallback).
+  Modal open/close behaviour for the 5 capability detail popups and the
+  "talk to us about your team" contact form. No frameworks -- plain DOM,
+  same pattern as the hamburger menu script above.
 -->
 <script>
-  function getByPath(obj, path) {
-    return path.split('.').reduce(function (value, key) {
-      return (value === undefined || value === null) ? undefined : value[key];
-    }, obj);
+  function openModal(id) {
+    var overlay = document.getElementById(id);
+    if (overlay) overlay.classList.add('open');
   }
 
-  function applySimpleFields(root, content) {
-    root.querySelectorAll('[data-content]').forEach(function (el) {
-      var value = getByPath(content, el.getAttribute('data-content'));
-      if (typeof value === 'string' && value.length > 0) {
-        el.textContent = value;
-      }
-    });
+  function closeModal(overlay) {
+    overlay.classList.remove('open');
   }
 
-  function applyFieldsToCard(card, item) {
-    card.querySelectorAll('[data-field]').forEach(function (el) {
-      var field = el.getAttribute('data-field');
-      var value = item[field];
-      if (typeof value === 'string' && value.length > 0) {
-        el.textContent = value;
-      }
+  // Anything with data-modal="modal-xyz" opens that overlay (capability cards,
+  // the "Talk to us about your team" button).
+  document.querySelectorAll('[data-modal]').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      openModal(trigger.getAttribute('data-modal'));
     });
-    card.querySelectorAll('[data-field-list]').forEach(function (listEl) {
-      var items = item[listEl.getAttribute('data-field-list')];
-      if (Array.isArray(items) && items.length > 0) {
-        populateList(listEl, items, function (li, text) {
-          var textEl = li.querySelector('[data-field="text"]');
-          if (textEl && typeof text === 'string') {
-            textEl.textContent = text;
-          }
-        });
-      }
+  });
+
+  // Click the dark backdrop (not the white card itself) to close.
+  document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal(overlay);
     });
-  }
+  });
 
-  function populateList(container, items, fillItem) {
-    var template = container.children[0];
-    if (!template) return;
-    var templateClone = template.cloneNode(true);
-
-    items.forEach(function (item, index) {
-      var node = index === 0 ? template : templateClone.cloneNode(true);
-      fillItem(node, item);
-      if (index > 0) {
-        container.appendChild(node);
-      }
+  // "Close" buttons on the capability modals, and "Cancel" on the contact modal.
+  document.querySelectorAll('.modal-close-btn, [data-close-contact]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var overlay = btn.closest('.modal-overlay');
+      if (overlay) closeModal(overlay);
     });
+  });
 
-    // Remove any leftover static entries beyond what content.json provided
-    while (container.children.length > items.length) {
-      container.removeChild(container.lastElementChild);
+  // Escape key closes whichever modal is open.
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
     }
-  }
+  });
 
-  function applyContentLists(root, content) {
-    root.querySelectorAll('[data-content-list]').forEach(function (container) {
-      var items = getByPath(content, container.getAttribute('data-content-list'));
-      if (!Array.isArray(items) || items.length === 0) return;
-
-      populateList(container, items, function (node, item) {
-        if (typeof item === 'string') {
-          var textEl = node.querySelector('[data-field="text"]');
-          if (textEl) textEl.textContent = item;
-        } else if (item && typeof item === 'object') {
-          applyFieldsToCard(node, item);
-        }
-      });
+  // "Talk to us about your team" form -- no backend, just opens the person's
+  // own email client with the details pre-filled (same approach as the
+  // rest of the site's non-functional/coming-soon forms).
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('contactName').value;
+      var email = document.getElementById('contactEmail').value;
+      var phone = document.getElementById('contactPhone').value;
+      var reason = document.getElementById('contactReason').value;
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone +
+        '\n\nReason for enquiry:\n' + reason;
+      window.location.href = 'mailto:hello@leadralabs.com?subject=' +
+        encodeURIComponent('Leadra for organisations') + '&body=' + encodeURIComponent(body);
+      closeModal(document.getElementById('modal-contact'));
     });
   }
-
-  fetch('content.json')
-    .then(function (response) {
-      if (!response.ok) throw new Error('content.json not found');
-      return response.json();
-    })
-    .then(function (content) {
-      applyContentLists(document, content);
-      applySimpleFields(document, content);
-    })
-    .catch(function () {
-      // content.json missing or invalid — hardcoded fallback text stays as-is
-    });
 </script>
 
 </body>
